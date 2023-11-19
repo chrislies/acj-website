@@ -4,25 +4,21 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <section className="flex flex-col gap-20">
-      <div className="relative z-20 flex flex-1 flex-col items-center">
-        <Image
-          src="/bridge.JPG"
-          alt="bridge"
-          // fill={true}
-          width={3830}
-          height={2270}
-          className="object-cover"
-        />
-        <div className="absolute p-10 rounded-xl left-20 top-1/4 w-fit text-white bg-slate-800/90">
+    <div
+      className="bg-cover bg-no-repeat bg-center bg-gray-900"
+      style={{ backgroundImage: 'url("bridge.JPG")' }}
+    >
+      {/* bg-red-500/30 */}
+      <section className="max-container flex items-center justify-center flex-col pt-[0px] pb-[100px] h-screen ">
+        <div className="px-[40px] py-[25px] lg:mb-[70px] lg:mr-[550px] md:mr-[0px] rounded-3xl shadow-3xl flex justify-center flex-col text-white backdrop-blur-sm bg-slate-800/90">
           <h1 className="font-bold lg:text-5xl md:text-4xl sm:text-3xl sm:p-0 text-center">
             Global Vision,
             <br></br>
             Local Wisdom,
             <br></br>
-            <h1 className="bg-clip-text text-transparent bg-gradient-to-b from-yellow-400 to-yellow-600">
+            <span className="bg-clip-text text-transparent bg-gradient-to-b from-yellow-400 to-yellow-600">
               Your Perfect Real Estate Partner.
-            </h1>
+            </span>
           </h1>
           <br></br>
           <p className="px-4 pt-3 max-w-prose text-lg">
@@ -40,7 +36,7 @@ const Hero = () => {
             residential properties. */}
           </p>
           <br></br>
-          <div className="flex justify-end">
+          <span className="flex justify-end">
             <Link href="/services">
               <Button
                 type="button"
@@ -49,10 +45,10 @@ const Hero = () => {
                 variant="btn_services" // from globals.css
               />
             </Link>
-          </div>
+          </span>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 };
 

@@ -110,3 +110,14 @@ export const SERVICES = [
     desc: "We provide service 6",
   },
 ];
+
+export const ACHIEVEMENTS = [
+  {
+    number: "18+",
+    title: "Years of Experience",
+  },
+  {
+    number: 13,
+    title: "Certifications",
+  },
+];

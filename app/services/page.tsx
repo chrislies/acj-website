@@ -1,4 +1,3 @@
-import Services from "@/components/Services";
 import { SERVICES } from "@/constants";
 
 const services = () => {
