@@ -39,6 +39,8 @@ const page = () => {
       msg.forEach((err) => {
         if (err.includes("Name")) {
           errorMap.name = err;
+        } else if (err.includes("valid name")) {
+          errorMap.name = err;
         } else if (err.includes("Email")) {
           errorMap.email = err;
         } else if (err.includes("Phone")) {
