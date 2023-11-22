@@ -11,11 +11,6 @@ const page = () => {
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    // console.log("Name: ", name.trim());
-    // console.log("Email: ", email.trim());
-    // console.log("Phone #: ", phone);
-    // console.log("Message: ", message);
-
     const res = await fetch("api/contact", {
       method: "POST",
       headers: {
@@ -78,6 +73,7 @@ const page = () => {
             type="text"
             id="name"
             placeholder=""
+            className={`${errors.name ? "border-red-500" : "border-slate-300"}`}
           />
           <span id="nameError" className="text-red-600">
             {errors.name}
@@ -94,6 +90,9 @@ const page = () => {
             type="text"
             id="email"
             placeholder=""
+            className={`${
+              errors.email ? "border-red-500" : "border-slate-300"
+            }`}
           />
           <span id="emailError" className="text-red-600">
             {errors.email}
@@ -124,6 +123,9 @@ const page = () => {
             style={{ minHeight: "128px", resize: "vertical" }}
             id="message"
             placeholder=""
+            className={`${
+              errors.message ? "border-red-500" : "border-slate-300"
+            }`}
           ></textarea>
           <span id="messageError" className="text-red-600">
             {errors.message}

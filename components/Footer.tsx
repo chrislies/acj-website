@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="flexCenter pt-16 pb-10 bg-emerald-500 text-black">
+    <footer className="flexCenter pt-16 pb-10 bg-lime-300 text-black">
       <div className="padding-container max-container flex w-full flex-col gap-14">
         <div className="flex flex-col items-start justify-center gap-[10%] md:flex-row">
           <Link href="/" className="mb-10">
@@ -60,7 +60,7 @@ const Footer = () => {
 
         <div className="border bg-gray-20" />
         <p className="regular-14 w-full text-center">
-          © 2023 ACJ International Realty LLC. All rights reserved.
+          © 2023 ACJ Internatiofnal Realty LLC. All rights reserved.
         </p>
       </div>
     </footer>
