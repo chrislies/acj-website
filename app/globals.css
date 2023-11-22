@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -15,25 +15,25 @@ body {
 }
 
 @layer utilities {
-  .btn_white { 
-    @apply  border-white bg-white px-8 py-3 text-green-50
+  .btn_white {
+    @apply border-white bg-white px-8 py-3 text-green-50;
   }
-  .btn_white_text  { 
-    @apply  border-white bg-white px-8 py-3 text-gray-90
+  .btn_white_text {
+    @apply border-white bg-white px-8 py-3 text-gray-90;
   }
-  .btn_green  { 
-    @apply  border-green-50 bg-green-50 px-8 py-5 text-white
+  .btn_green {
+    @apply border-green-50 bg-green-50 px-8 py-5 text-white;
   }
-  .btn_dark_green { 
-    @apply  bg-green-90 px-8 py-4 text-white transition-all hover:bg-black
+  .btn_dark_green {
+    @apply bg-green-90 px-8 py-4 text-white transition-all hover:bg-black;
   }
-  .btn_dark_green_outline  { 
-    @apply border-gray-20 bg-green-90 px-5 py-2 text-white
+  .btn_dark_green_outline {
+    @apply border-gray-20 bg-green-90 px-5 py-2 text-white;
   }
-  .btn_services { 
-    @apply border-gray-20 bg-slate-50 px-5 py-2 text-black transition-all hover:bg-slate-400
+  .btn_services {
+    @apply border-gray-20 bg-slate-50 px-5 py-2 text-black transition-all hover:bg-slate-400;
   }
-  
+
   .max-container {
     @apply mx-auto max-w-[1440px];
   }
@@ -157,4 +157,18 @@ body {
 .hide-scrollbar {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+}
+
+form > div {
+  @apply flex flex-col gap-0 w-[70%];
+}
+
+form > div > span {
+  @apply h-[13px] text-sm text-red-500;
+}
+
+input,
+textarea {
+  /* @apply shadow-md px-6 py-2 border border-slate-300; */
+  @apply shadow-md px-5 py-3 border text-lg border-slate-300;
 }
