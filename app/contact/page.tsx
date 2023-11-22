@@ -6,7 +6,7 @@ const page = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [phone, setPhone] = useState("");
-  const [error, setError] = useState([]);
+  const [errors, setErrors] = useState({});
   const [success, setSuccess] = useState(false);
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -30,23 +30,43 @@ const page = () => {
     });
 
     const { msg, success } = await res.json();
-    setError(msg);
-    setSuccess(success);
 
     if (success) {
       setName("");
       setEmail("");
       setPhone("");
       setMessage("");
+      setErrors({});
+      setSuccess(true);
+    } else {
+      // Map error messages to input fields
+      const errorMap = {};
+      msg.forEach((err) => {
+        if (err.includes("Name")) {
+          errorMap.name = err;
+        } else if (err.includes("Email")) {
+          errorMap.email = err;
+        } else if (err.includes("Phone")) {
+          errorMap.phone = err;
+        } else if (err.includes("Message")) {
+          errorMap.message = err;
+        } else {
+          // Handle other types of errors, including "Invalid email address"
+          errorMap.email = err;
+        }
+      });
+
+      setErrors(errorMap);
+      setSuccess(false);
     }
   };
 
   return (
-    <section className="bg-red-500d max-container w-[80%] m-12">
+    <section className="bg-red-500d flex flex-col max-container w-[80%] mt-10">
       <h1 className="text-center font-bold text-4xl">Contact Us</h1>
       <form
         onSubmit={handleSubmit}
-        className="bg-blue-500d py-4 mt-4 border-t flex flex-col items-center gap-5"
+        className="bg-blue-500d pt-8 pb-10 mt-10 border-t flex flex-col items-center gap-5"
       >
         <div className="">
           <label htmlFor="name">
@@ -59,7 +79,9 @@ const page = () => {
             id="name"
             placeholder=""
           />
-          <span id="nameError" className=""></span>
+          <span id="nameError" className="text-red-600">
+            {errors.name}
+          </span>
         </div>
 
         <div className="">
@@ -73,7 +95,9 @@ const page = () => {
             id="email"
             placeholder=""
           />
-          <span id="nameError" className=""></span>
+          <span id="emailError" className="text-red-600">
+            {errors.email}
+          </span>
         </div>
 
         <div className="">
@@ -85,7 +109,9 @@ const page = () => {
             id="phone"
             placeholder=""
           />
-          <span id="nameError" className=""></span>
+          <span id="phoneError" className="text-red-600">
+            {errors.phone}
+          </span>
         </div>
 
         <div className="">
@@ -99,7 +125,9 @@ const page = () => {
             id="message"
             placeholder=""
           ></textarea>
-          <span id="nameError" className=""></span>
+          <span id="messageError" className="text-red-600">
+            {errors.message}
+          </span>
         </div>
 
         <button
@@ -108,21 +136,17 @@ const page = () => {
         >
           Send
         </button>
-      </form>
-
-      <div className="bg-slate-100 flex flex-col">
-        {error &&
-          error.map((err) => (
+        <div className="h-5">
+          {success && (
             <div
-              className={`${
-                success ? "text-green-800" : "text-red-600"
-              } px-5 py-2`}
-              key={err} // Add a unique key for each error
+              className={`bg-slate-100 text-green-800 text-lg px-5 py-2`}
+              key="success"
             >
-              {err}
+              Message sent successfully.
             </div>
-          ))}
-      </div>
+          )}
+        </div>
+      </form>
     </section>
   );
 };
