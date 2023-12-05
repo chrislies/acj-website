@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="flex flex-col items-start justify-center gap-[10%] md:flex-row">
           <Link href="/" className="mb-10">
             <Image
-              src="/acj-logo.png"
+              src="/acj-icon.png"
               alt="logo"
               width={130}
               height={1}
