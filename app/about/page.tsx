@@ -12,11 +12,12 @@ const page = () => {
           <div className="border-b-4 border-white w-[8%]" />
         </div>
       </div>
-      <div className="max-container flex flex-col items-center bg-red-500d px-20 py-10">
+      <div className="bg-slate-200 px-80 py-10">
+        {/* flex flex-col items-center */}
         <p className="">
           ACJ International Realty is a certified New York State and City
           Minority Women Business Enterprise (MWBE) real estate consulting firm
-          specializing real estate services.{" "}
+          specializing real estate services. Established in 2018 by Julie Huang,{" "}
         </p>
       </div>
     </section>
