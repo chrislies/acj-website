@@ -135,7 +135,7 @@ const page = () => {
         </div>
 
         <button
-          className="bg-green-700 p-3 w-[150px]  text-white font-bold"
+          className="bg-green-700 hover:bg-green-800 rounded p-3 w-[150px] text-white font-bold"
           type="submit"
         >
           Send

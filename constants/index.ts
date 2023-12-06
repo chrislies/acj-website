@@ -81,33 +81,38 @@ export const SOCIALS = {
 export const SERVICES = [
   {
     id: 1,
-    title: "Service 1",
-    desc: "We provide service 1",
+    title: "Buy",
+    desc: "Discover your dream property with our expert guidance. From prime commercial spaces to cozy residential homes, we help you navigate the buying process with ease, ensuring a seamless and satisfying transaction.",
   },
   {
     id: 2,
-    title: "Service 2",
-    desc: "We provide service 2",
+    title: "Rent",
+    desc: "Explore a diverse portfolio of rental properties that suit your lifestyle. Whether you're searching for a commercial space for your business or a residential oasis to call home, our rental options cater to every taste and requirement.",
   },
   {
     id: 3,
-    title: "Service 3",
-    desc: "We provide service 3",
+    title: "Sell",
+    desc: "Maximize the value of your property with our dedicated team of real estate professionals. We employ strategic marketing and negotiation tactics to ensure a timely and lucrative sale of your commercial or residential asset.",
   },
   {
     id: 4,
-    title: "Service 4",
-    desc: "We provide service 4",
+    title: "New Developments",
+    desc: "Stay ahead of the curve with our access to cutting-edge new developments. Whether it's the latest commercial project shaping the skyline or a residential community designed for modern living, we connect you with the future of real estate.",
   },
   {
     id: 5,
-    title: "Service 5",
-    desc: "We provide service 5",
+    title: "Relocation",
+    desc: "Navigating a move can be challenging, but with our relocation services, the transition becomes smooth and stress-free. We assist individuals and businesses in finding the perfect space, ensuring a seamless relocation experience.",
   },
   {
     id: 6,
-    title: "Service 6",
-    desc: "We provide service 6",
+    title: "Healthcare Real Estate",
+    desc: "For those in the healthcare industry, our specialized services cater to your unique real estate needs. From medical offices to healthcare facilities, we understand the intricacies of healthcare real estate and provide tailored solutions.",
+  },
+  {
+    id: 7,
+    title: "Industrial Real Estate",
+    desc: "In the dynamic world of industry, finding the right space is crucial. Our expertise in industrial real estate ensures that your business thrives in a space that meets all operational requirements and future growth potential.",
   },
 ];
 

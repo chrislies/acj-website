@@ -21,7 +21,7 @@ const Hero = () => {
             </span>
           </h1>
           <br></br>
-          <p className="px-4 pt-3 max-w-prose text-lg">
+          <p className="px-4 pt-3 max-w-prose text-lg tracking-wider">
             ACJ International Realty LLC offers expert consulting services in
             the commercial real estate sector. We specialize in assisting
             international companies in expanding their business within New York

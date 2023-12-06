@@ -22,10 +22,10 @@ const CompanyMission = () => {
           <div className="bg-blue-500d w-[40%] p-10">
             {MILESTONES.map((item, index) => (
               <div key={index}>
-                <h1 className="text-green-50 font-bold text-[70px]">
+                <h1 className="text-green-50 font-bold text-[70px] leading-[65px]">
                   {item.number}
                 </h1>
-                <p className="text-slate-900 font-bold text-[25px] pl-[6px] mb-[50px]">
+                <p className="text-slate-900 font-bold text-[25px] pl-[5px] mb-[50px] tracking-wide">
                   {item.title}
                 </p>
               </div>
@@ -50,7 +50,7 @@ const CompanyMission = () => {
               <Link href="/about">
                 <Button
                   type="button"
-                  title="Our History"
+                  title="Who We Are"
                   icon=""
                   variant="btn_dark_green" // from globals.css
                 ></Button>
