@@ -6,7 +6,7 @@ import Button from "./Button";
 const Navbar = () => {
   return (
     <div className="sticky top-0 z-[999] bg-white shadow-3xl">
-      <nav className="flexBetween max-container relative z-30 py-1 max-w-full">
+      <nav className="flexBetween max-container padding-container relative z-30 py-1 max-w-full">
         <Link href="/">
           <Image src="/acj-logo.png" alt="logo" width={140} height={1} />{" "}
           {/* className="border-2 rounded-lg border-yellow-700/100 shadow-2xl" */}

@@ -8,7 +8,7 @@ const Hero = () => {
       style={{ backgroundImage: 'url("bridge.JPG")' }}
     >
       {/* bg-red-500/30 */}
-      <section className="max-container flex items-center justify-center flex-col pt-[0px] pb-[100px] h-screen ">
+      <section className="max-container padding-container flex items-center justify-center flex-col pt-[0px] pb-[100px] h-screen ">
         <div className="px-[40px] py-[25px] lg:mb-[70px] lg:mr-[550px] md:mr-[0px] rounded-3xl shadow-3xl flex justify-center flex-col text-white backdrop-blur-sm bg-slate-800/90">
           <h1 className="font-bold lg:text-5xl md:text-4xl sm:text-3xl sm:p-0 text-center">
             Global Vision,
