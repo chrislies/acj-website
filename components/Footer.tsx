@@ -1,83 +1,66 @@
-import { FOOTER_CONTACT_INFO, FOOTER_LINKS, SOCIALS } from "@/constants";
+import { NAV_LINKS } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="flexCenter pt-16 pb-10 bg-lime-400 text-black">
-      <div className="padding-container max-container flex w-full flex-col gap-14">
-        <div className="flex flex-col items-start justify-center gap-[10%] md:flex-row">
-          <Link href="/" className="mb-10">
+    <footer className="pt-16 pb-5 bg-[rgb(131,172,70)] text-black">
+      <div className="bg-red-500d max-container flex w-full flex-col">
+        <div className="grid grid-cols-3 justify-items-center items-start text-smd font-semibold">
+          <Link href="/">
             <Image
               src="/acj-logo.png"
               alt="logo"
-              width={130}
+              width={150}
               height={1}
             ></Image>
           </Link>
-
-          <div className="flex flex-wrap gap-10 sm:justify-between md:flex-1">
-            {FOOTER_LINKS.map((columns) => (
-              <FooterColumn title={columns.title}>
-                <ul className="regular-14 flex flex-col gap-4">
-                  {columns.links.map((link) => (
-                    <Link href="/" key={link}>
-                      {link}
-                    </Link>
-                  ))}
-                </ul>
-              </FooterColumn>
+          <div className="flex flex-row gap-10 justify-items-end">
+            {/* <Link href="/">Home</Link>
+            <Link href="/about">About</Link>
+            <Link href="/services">Services</Link>
+            <Link href="/contact">Contact</Link> */}
+            {NAV_LINKS.map((link) => (
+              <Link
+                href={link.href}
+                key={link.key}
+                className="hover:opacity-60 transition-all duration-200 ease-in-out"
+              >
+                {link.label}
+              </Link>
             ))}
-
-            <div className="flex flex-col gap-5">
-              <FooterColumn title={FOOTER_CONTACT_INFO.title}>
-                {FOOTER_CONTACT_INFO.links.map((link) => (
-                  <Link
-                    href="/"
-                    key={link.label}
-                    className="flex gap-4 md:flex-col lg:flex-row"
-                  >
-                    <p className="whitespace-nowrap">{link.label}:</p>
-                    <p className="medium-14 whitespace-nowrap">{link.value}</p>
-                  </Link>
-                ))}
-              </FooterColumn>
+          </div>
+          <div className="flex flex-col items-start gap-5">
+            <div className="flex flex-row gap-2">
+              <Image
+                src="/phone.svg"
+                alt="phone"
+                width={23}
+                height={23}
+              ></Image>
+              <Link className="hover:underline" href="tel:9172952102">
+                {" "}
+                917-295-2102
+              </Link>
             </div>
-
-            <div className="flex flex-col gap-5">
-              <FooterColumn title={SOCIALS.title}>
-                <ul className="regular-14 flex gap-4">
-                  {SOCIALS.links.map((link) => (
-                    <Link href="/" key={link}>
-                      <Image src={link} alt="logo" width={24} height={24} />
-                    </Link>
-                  ))}
-                </ul>
-              </FooterColumn>
+            <div className="flex flex-row gap-2">
+              <Image src="/mail.svg" alt="email" width={23} height={23}></Image>
+              <Link
+                className="hover:underline"
+                href="mailto:info@acjinternationalrealty.com"
+              >
+                info@acjinternationalrealty.com
+              </Link>
             </div>
           </div>
         </div>
 
-        <div className="border bg-gray-20" />
+        <div className="border-t-2 mt-20 mb-5" />
         <p className="regular-14 w-full text-center tracking-tighter">
-          © 2023 ACJ Internatiofnal Realty LLC. All rights reserved.
+          © 2023 ACJ International Realty LLC. All rights reserved.
         </p>
       </div>
     </footer>
-  );
-};
-
-type FooterColumnProps = {
-  title: string;
-  children: React.ReactNode;
-};
-
-const FooterColumn = ({ title, children }: FooterColumnProps) => {
-  return (
-    <div className="flex flex-col gap-5">
-      <h4 className="bold-18 whitespace-nowrap">{title}</h4>
-      {children}
-    </div>
   );
 };
 

@@ -8,11 +8,11 @@ const page = () => {
         style={{ backgroundImage: 'url("nyc.jpeg")' }}
       >
         <div className="bg-slate-700/40 backdrop-blur-sm w-full h-full flex flex-col justify-center items-center">
-          <div className="border-b-4 border-white w-[11%]" />
+          {/* <div className="border-b-4 border-white w-[11%]" /> */}
           <h1 className="font-bold text-6xl text-white leading-[70px]">
             About Us
           </h1>
-          <div className="border-b-4 border-white w-[12%]" />
+          {/* <div className="border-b-4 border-white w-[12%]" /> */}
         </div>
       </div>
       <div className="gray-50 px-[550px] py-12 text-xl leading-8 tracking-tight">

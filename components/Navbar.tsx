@@ -6,9 +6,9 @@ import Button from "./Button";
 const Navbar = () => {
   return (
     <div className="sticky top-0 z-[999] bg-white shadow-3xl">
-      <nav className="flexBetween max-container padding-container relative z-30 py-2 max-w-full">
+      <nav className="flexBetween max-container relative z-30 py-1 max-w-full">
         <Link href="/">
-          <Image src="/acj-logo.png" alt="logo" width={130} height={1} />{" "}
+          <Image src="/acj-logo.png" alt="logo" width={140} height={1} />{" "}
           {/* className="border-2 rounded-lg border-yellow-700/100 shadow-2xl" */}
         </Link>
 
@@ -17,21 +17,12 @@ const Navbar = () => {
             <Link
               href={link.href}
               key={link.key}
-              className="regular-16 text-grey-50 flexCenter cursor-pointer"
+              className="regular-16 text-grey-50 flexCenter cursor-pointer border-y-2 border-transparent hover:border-b-yellow-600/70 transition-all duration-300 ease-in-out"
             >
               {link.label}
             </Link>
           ))}
         </ul>
-
-        <div className="lg:flexCenter hidden">
-          <Button
-            type="button"
-            title="Click Me"
-            icon=""
-            variant="btn_dark_green" // from globals.css
-          />
-        </div>
 
         <Image
           src="menu.svg"
