@@ -1,4 +1,6 @@
 "use client"; // for useState feature
+import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 
 const page = () => {
@@ -61,9 +63,29 @@ const page = () => {
   return (
     <section className="bg-red-500d flex flex-col max-container w-[80%] mt-10">
       <h1 className="text-center font-bold text-4xl">Contact Us</h1>
+      <div className="flexCenter">
+        <div className="w-[45vw] grid grid-cols-2 mt-5 justify-items-centerd">
+          <div className="flex flex-row gap-2 justify-start">
+            <Image src="/phone.svg" alt="phone" width={22} height={22}></Image>
+            <Link className="hover:underline" href="tel:9172952102">
+              {" "}
+              917-295-2102
+            </Link>
+          </div>
+          <div className="flex flex-row gap-2 justify-end">
+            <Image src="/mail.svg" alt="email" width={22} height={22}></Image>
+            <Link
+              className="hover:underline"
+              href="mailto:info@acjinternationalrealty.com"
+            >
+              info@acjinternationalrealty.com
+            </Link>
+          </div>
+        </div>
+      </div>
       <form
         onSubmit={handleSubmit}
-        className="bg-blue-500d pt-8 pb-10 mt-10 border-t flex flex-col items-center gap-5"
+        className="bg-blue-500d pt-8 pb-10 border-t flex flex-col items-center gap-5"
       >
         <div className="">
           <label htmlFor="name">

@@ -35,8 +35,8 @@ const Footer = () => {
               <Image
                 src="/phone.svg"
                 alt="phone"
-                width={23}
-                height={23}
+                width={22}
+                height={22}
               ></Image>
               <Link className="hover:underline" href="tel:9172952102">
                 {" "}
@@ -44,7 +44,7 @@ const Footer = () => {
               </Link>
             </div>
             <div className="flex flex-row gap-2">
-              <Image src="/mail.svg" alt="email" width={23} height={23}></Image>
+              <Image src="/mail.svg" alt="email" width={22} height={22}></Image>
               <Link
                 className="hover:underline"
                 href="mailto:info@acjinternationalrealty.com"
