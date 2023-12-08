@@ -9,13 +9,13 @@ const page = () => {
       >
         <div className="bg-slate-700/40 backdrop-blur-sm w-full h-full flex flex-col justify-center items-center">
           {/* <div className="border-b-4 border-white w-[11%]" /> */}
-          <h1 className="font-bold text-6xl text-white leading-[70px]">
+          <h1 className="font-bold lg:text-6xl max-lg:text-5xl max-sm:text-4xl text-white leading-[70px]">
             About Us
           </h1>
           {/* <div className="border-b-4 border-white w-[12%]" /> */}
         </div>
       </div>
-      <div className="gray-50 px-[550px] py-12 text-xl leading-8 tracking-tight">
+      <div className="gray-50 2xl:px-[500px] max-2xl:px-[350px] max-xl:px-[250px] max-lg:px-[150px] max-md:px-[120px] max-sm:px-[40px] py-12 text-xl leading-8 tracking-tight flex flex-col justify-center items-center">
         {/* flex flex-col items-center */}
         <p className="">
           <strong>ACJ International Realty LLC </strong>

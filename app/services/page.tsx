@@ -16,10 +16,11 @@ const services = () => {
           </span>
         </h4>
         <p className="w-[38vw] text-lg tracking-tighter">
-          At ACJ International Realty LLC, we pride ourselves on being your
-          one-stop destination for all things real estate. Whether you're
-          embarking on a new investment, seeking the perfect rental, or selling
-          your property, we're here to turn your real estate goals into reality.
+          At <span className="font-bold">ACJ International Realty LLC</span>, we
+          pride ourselves on being your one-stop destination for all things real
+          estate. Whether you're embarking on a new investment, seeking the
+          perfect rental, or selling your property, we're here to turn your real
+          estate goals into reality.
         </p>
         <div className="mt-5 flex items-center gap-2 ">
           <div className="border-b-2 w-[120px] border-yellow-700/70" />
