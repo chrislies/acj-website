@@ -8,14 +8,14 @@ const services = () => {
       {/* h-[calc(100vh-6rem)] */}
       {/* md:h-[calc(100vh-9rem)] */}
       <div className="mt-16 flex flex-col items-center text-center">
-        <h4 className="uppercase pb-5 text-4xl font-bold">
+        <h4 className="uppercase pb-5 text-4xl max-sm:text-3xl font-bold">
           Our
           <span className="bg-clip-text text-transparent bg-gradient-to-b from-yellow-500 to-yellow-700/70">
             {" "}
             Services
           </span>
         </h4>
-        <p className="w-[38vw] text-lg tracking-tighter">
+        <p className="2xl:w-[38vw] max-2xl:w-[42vw] max-lg:w-[57vw] max-md:w-[65vw] max-sm:w-[85vw] text-lg max-lg:text-base max-sm:text-sm tracking-tighter">
           At <span className="font-bold">ACJ International Realty LLC</span>, we
           pride ourselves on being your one-stop destination for all things real
           estate. Whether you're embarking on a new investment, seeking the
@@ -28,11 +28,11 @@ const services = () => {
           <div className="border-b-2 w-[120px] border-yellow-700/70" />
         </div>
       </div>
-      <div className="max-container bg-red-500d p-10 grid grid-cols-3 grid-flow-row gap-[2rem] bg-red-500d">
+      <div className="bg-red-500d p-10 grid 2xl:grid-cols-3 max-2xl:grid-cols-3 max-md:grid-cols-2 max-sm:flex max-sm:flex-col grid-flow-row 2xl:gap-[2rem] max-2xl:gap-[25px] max-xl:gap-[22px] max-lg:gap-[20px] max-md:gap-[25px] max-sm:gap-[20px]">
         {SERVICES.map((service) => (
-          <div className="bg-[#FEFEFE] border-d2 border-yellow-700/70 rounded-lg shadow-xl w-[320px] p-5">
+          <div className="bg-[#FEFEFE] border-d2 border-yellow-700/70 rounded-lg shadow-xl 2xl:w-[320px] max-2xl:w-[310px] max-xl:w-[250px] max-lg:w-[220px] max-md:w-[260px] p-5 ">
             <h1 className="text-center text-xl font-bold">{service.title}</h1>
-            <p className="bg-green-50d text-center tracking-tight px-4 pt-4">
+            <p className="bg-green-50d text-center 2xl:tracking-tight max-2xl:tracking-tight max-xl:tracking-tighter max-lg:tracking-[-.05em] 2xl:px-4 max-2xl:px-[16px] max-xl:px-[8px] max-lg:px-[1px] max-md:px-[10px] pt-4">
               {service.desc}
             </p>
           </div>
