@@ -4,10 +4,10 @@ import Link from "next/link";
 
 const services = () => {
   return (
-    <section className="pb-24 lg:px-20 xl:px-49 flex flex-col items-center bg-[#F5F5F5]">
+    <section className="py-10 lg:px-20 xl:px-49 flex flex-col items-center bg-[#F5F5F5]">
       {/* h-[calc(100vh-6rem)] */}
       {/* md:h-[calc(100vh-9rem)] */}
-      <div className="mt-16 flex flex-col items-center text-center">
+      <div className="flex flex-col items-center text-center">
         <h4 className="uppercase pb-5 text-4xl max-sm:text-3xl font-bold">
           Our
           <span className="bg-clip-text text-transparent bg-gradient-to-b from-yellow-500 to-yellow-700/70">

@@ -17,8 +17,8 @@ const MILESTONES = [
 const CompanyMission = () => {
   return (
     <section className="bg-[#F3F4F6]">
-      <div className="bg-red-400d max-container p-10 flex flex-col items-center justify-center">
-        <div className="bg-red-500d flex flex-row w-full items-center ">
+      <div className="bg-green-400d max-container p-10">
+        <div className="bg-red-500d flex flex-row w-full justify-center items-center">
           <div className="bg-blue-500d w-[40%] p-10">
             {MILESTONES.map((item, index) => (
               <div key={index}>
