@@ -41,17 +41,47 @@ const page = () => {
       msg.forEach((err) => {
         if (err.includes("Name")) {
           errorMap.name = err;
+          console.log("name error");
+          document.querySelector(".name").scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+            inline: "nearest",
+          });
         } else if (err.includes("valid name")) {
           errorMap.name = err;
+          console.log("name error");
+          document.querySelector(".name").scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+            inline: "nearest",
+          });
         } else if (err.includes("Email")) {
           errorMap.email = err;
+          console.log("email error");
+          document.querySelector(".email").scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+            inline: "nearest",
+          });
         } else if (err.includes("Phone")) {
           errorMap.phone = err;
         } else if (err.includes("Message")) {
           errorMap.message = err;
+          console.log("message error");
+          document.querySelector(".message").scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+            inline: "nearest",
+          });
         } else {
           // Handle other types of errors, including "Invalid email address"
           errorMap.email = err;
+          console.log("email error");
+          document.querySelector(".email").scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+            inline: "nearest",
+          });
         }
       });
 
@@ -98,7 +128,7 @@ const page = () => {
         onSubmit={handleSubmit}
         className="bg-blue-500d pt-8 pb-10 border-t flex flex-col items-center gap-5"
       >
-        <div className="">
+        <div className="name">
           <label htmlFor="name">
             Name<span className="text-red-500">*</span>
           </label>
@@ -115,7 +145,7 @@ const page = () => {
           </span>
         </div>
 
-        <div className="">
+        <div className="email">
           <label htmlFor="email">
             Email<span className="text-red-500">*</span>
           </label>
@@ -134,7 +164,7 @@ const page = () => {
           </span>
         </div>
 
-        <div className="">
+        <div className="phone">
           <label htmlFor="phone">Phone Number</label>
           <input
             onChange={(event) => setPhone(event.target.value)}
@@ -148,7 +178,7 @@ const page = () => {
           </span>
         </div>
 
-        <div className="">
+        <div className="message">
           <label htmlFor="message">
             Message<span className="text-red-500">*</span>
           </label>
@@ -173,7 +203,7 @@ const page = () => {
         >
           Send
         </button>
-        <div className="h-5">
+        <div className="2xl:h-5 max-2xl:h-5 max-sm:h-[30px]">
           {success && (
             <div
               className={`bg-slate-100 text-green-800 text-lg px-5 py-2`}

@@ -48,7 +48,7 @@ const Navbar = () => {
               href={link.href}
               key={link.key}
               onClick={closeMenu}
-              className="regular-16 text-grey-50 flexCenter cursor-pointer border-y-2 border-transparent hover:border-b-yellow-600/70 transition-all duration-300 ease-in-out"
+              className="text-base font-medium text-grey-50 flexCenter cursor-pointer border-y-2 border-transparent hover:border-b-yellow-600/70 transition-all duration-300 ease-in-out"
             >
               {link.label}
             </Link>
