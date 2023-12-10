@@ -40,7 +40,6 @@ const page = () => {
       const errorMap = {};
       msg.forEach((err) => {
         if (err.includes("Name")) {
-          errorMap.name = err;
           console.log("name error");
           document.querySelector(".name").scrollIntoView({
             behavior: "smooth",
@@ -48,7 +47,6 @@ const page = () => {
             inline: "nearest",
           });
         } else if (err.includes("valid name")) {
-          errorMap.name = err;
           console.log("name error");
           document.querySelector(".name").scrollIntoView({
             behavior: "smooth",
@@ -56,7 +54,6 @@ const page = () => {
             inline: "nearest",
           });
         } else if (err.includes("Email")) {
-          errorMap.email = err;
           console.log("email error");
           document.querySelector(".email").scrollIntoView({
             behavior: "smooth",
@@ -67,7 +64,6 @@ const page = () => {
           errorMap.phone = err;
         } else if (err.includes("Message")) {
           errorMap.message = err;
-          console.log("message error");
           document.querySelector(".message").scrollIntoView({
             behavior: "smooth",
             block: "center",
@@ -76,7 +72,6 @@ const page = () => {
         } else {
           // Handle other types of errors, including "Invalid email address"
           errorMap.email = err;
-          console.log("email error");
           document.querySelector(".email").scrollIntoView({
             behavior: "smooth",
             block: "center",

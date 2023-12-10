@@ -48,31 +48,30 @@ const Navbar = () => {
               href={link.href}
               key={link.key}
               onClick={closeMenu}
-              className="text-base font-medium text-grey-50 flexCenter cursor-pointer border-y-2 border-transparent hover:border-b-yellow-600/70 transition-all duration-300 ease-in-out"
+              className="text-base font-semibold text-grey-50 flexCenter cursor-pointer border-y-2 border-transparent hover:border-b-yellow-600/70 transition-all duration-300 ease-in-out"
             >
               {link.label}
             </Link>
           ))}
         </ul>
 
-        <Image
-          src="/menu.svg"
-          alt="menu"
-          width={32}
-          height={32}
-          id="menu-button"
-          className="inline-block cursor-pointer lg:hidden"
-          onClick={toggleMenu}
-        />
+        {/* prettier-ignore */}
+        <div id="menu-button" onClick={toggleMenu} className="lg:hidden cursor-pointer">
+          <span className={`bar ${isMenuOpen ? "rotate-45 translate-y-[8px]" : ""} ease-in-out duration-300 transition-all`}></span>
+          <span className={`bar ${isMenuOpen ? "opacity-0 bg-white" : ""} ease-in-out duration-50 transition-all`}></span>
+          <span className={`bar ${isMenuOpen ? "rotate-[-45deg] translate-y-[-8px]" : "" } ease-in-out duration-300 transition-all`}></span>
+        </div>
       </nav>
+      {/* prettier-ignore */}
       {isMenuOpen && (
-        <div className="lg:hidden menu-container absolute top-full left-0 w-full bg-white border-t-2 py-4 flex flex-col gap-6 shadow-3xl">
+        <div className="lg:hidden menu-container absolute top-full left-0 w-full bg-white border-t-2 flex flex-col shadow-3xl">
           {NAV_LINKS.map((link) => (
             <Link
               href={link.href}
               key={link.key}
               onClick={closeMenu}
-              className="text-xl text-grey-50 flexCenter cursor-pointer active:text-yellow-600/70"
+              className={`${link.href === "/contact" ? "" : "border-b-2"} 
+              py-4 text-xl text-grey-50 flexCenter cursor-pointer active:text-yellow-600/70`}
             >
               {link.label}
             </Link>

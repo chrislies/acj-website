@@ -172,3 +172,8 @@ textarea {
   /* @apply shadow-md px-6 py-2 border border-slate-300; */
   @apply shadow-md px-5 py-3 border text-lg border-slate-300;
 }
+
+/* Hamburger memu bars */
+.bar {
+  @apply block w-[25px] h-[3px] my-[5px] mx-[auto] bg-black;
+}
