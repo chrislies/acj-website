@@ -175,5 +175,5 @@ textarea {
 
 /* Hamburger memu bars */
 .bar {
-  @apply block w-[25px] h-[3px] my-[5px] mx-[auto] bg-black;
+  @apply block w-[30px] h-[3px] my-[5px] mx-[auto] bg-black;
 }

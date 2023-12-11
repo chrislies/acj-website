@@ -40,21 +40,21 @@ const page = () => {
       const errorMap = {};
       msg.forEach((err) => {
         if (err.includes("Name")) {
-          console.log("name error");
+          errorMap.name = err;
           document.querySelector(".name").scrollIntoView({
             behavior: "smooth",
             block: "center",
             inline: "nearest",
           });
         } else if (err.includes("valid name")) {
-          console.log("name error");
+          errorMap.name = err;
           document.querySelector(".name").scrollIntoView({
             behavior: "smooth",
             block: "center",
             inline: "nearest",
           });
         } else if (err.includes("Email")) {
-          console.log("email error");
+          errorMap.email = err;
           document.querySelector(".email").scrollIntoView({
             behavior: "smooth",
             block: "center",
@@ -64,11 +64,11 @@ const page = () => {
           errorMap.phone = err;
         } else if (err.includes("Message")) {
           errorMap.message = err;
-          document.querySelector(".message").scrollIntoView({
-            behavior: "smooth",
-            block: "center",
-            inline: "nearest",
-          });
+          // document.querySelector(".message").scrollIntoView({
+          //   behavior: "smooth",
+          //   block: "center",
+          //   inline: "nearest",
+          // });
         } else {
           // Handle other types of errors, including "Invalid email address"
           errorMap.email = err;
@@ -193,7 +193,7 @@ const page = () => {
         </div>
 
         <button
-          className="bg-green-700 hover:bg-green-800 rounded p-3 w-[150px] text-white font-bold"
+          className="bg-green-600 hover:bg-green-500 rounded p-3 w-[150px] text-white font-bold"
           type="submit"
         >
           Send

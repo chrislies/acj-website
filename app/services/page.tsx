@@ -39,7 +39,7 @@ const services = () => {
         ))}
       </div>
       <Link href="/contact">
-        <button className="bg-green-600 hover:bg-green-700 rounded px-6 py-2 text-white text-lg">
+        <button className="bg-green-600 hover:bg-green-500 rounded px-6 py-2 text-white text-lg">
           Get In Touch
         </button>
       </Link>
