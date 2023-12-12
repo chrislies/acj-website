@@ -71,7 +71,7 @@ const Navbar = () => {
               key={link.key}
               onClick={closeMenu}
               className={`${link.href === "/contact" ? "" : "border-b-2"} 
-              py-4 text-xl text-grey-50 flexCenter cursor-pointer active:text-yellow-600/70`}
+              py-4 text-xl text-grey-50 flexCenter cursor-pointer font-[500] tracking-tight hover:text-yellow-700 transition-all duration-100 ease-in-out active:text-yellow-600/70`}
             >
               {link.label}
             </Link>

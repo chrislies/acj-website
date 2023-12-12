@@ -11,7 +11,7 @@ const page = () => {
       >
         <div className="bg-slate-700/40 backdrop-blur-sm w-full h-full flex flex-col justify-center items-center">
           {/* <div className="border-b-4 border-white w-[11%]" /> */}
-          <h1 className="font-bold lg:text-6xl max-lg:text-5xl max-sm:text-4xl text-white leading-[70px]">
+          <h1 className="font-bold lg:text-6xl max-lg:text-5xl max-sm:text-4xl text-white tracking-tight leading-[70px]">
             About Us
           </h1>
           {/* <div className="border-b-4 border-white w-[12%]" /> */}
@@ -40,7 +40,7 @@ const page = () => {
       <div className="border-b-2 border-slate-300 w-[90vw] mx-auto block" />
       <div className="companyCertificates mt-12 flex flex-col items-center text-center">
         <h4 className="pb-5 text-4xl max-sm:text-3xl font-bold">
-          Company Certifications  
+          Company Certifications
         </h4>
         <p className="2xl:w-[38vw] max-2xl:w-[42vw] max-lg:w-[57vw] max-md:w-[65vw] max-sm:w-[85vw] text-lg max-lg:text-base max-sm:text-sm tracking-tighter">
           At <span className="font-bold">ACJ International Realty LLC</span>, we

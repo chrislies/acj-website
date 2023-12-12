@@ -86,10 +86,19 @@ const page = () => {
   };
 
   return (
-    <section className="bg-red-500d flex flex-col max-container w-[80%] mt-10">
-      <h1 className="text-center font-bold text-4xl">Contact Us</h1>
-      <div className="flexCenter">
-        <div className="lg:w-[45vw] max-lg:w-fit lg:text-base max-lg:text-sm grid lg:grid-cols-2 lg:grid-rows-1 lg:grid-flow-row max-lg:grid-rows-2 max-lg:grid-flow-col mt-5">
+    <section>
+      <div
+        className="flex justify-center bg-cover bg-no-repeat bg-center h-[30vh]"
+        style={{ backgroundImage: 'url("worldmap.jpg")' }}
+      >
+        <div className="backdrop-blur-[3px] bg-white/20 w-full h-full flex flex-col justify-center items-center">
+          <h1 className="font-bold lg:text-6xl max-lg:text-5xl max-sm:text-4xl tracking-tight leading-[70px]">
+            Contact Us
+          </h1>
+        </div>
+      </div>
+      <div className="flex flex-row justify-center items-center bg-red-500d py-10">
+        <div className="bg-blue-500d lg:w-[45vw] max-lg:w-fit 2xl:text-xl max-lg:text-sm grid lg:grid-cols-2 lg:grid-rows-1 lg:grid-flow-row max-lg:grid-rows-2 max-lg:grid-flow-col">
           <div className="flex lg:flex-row gap-2 lg:justify-start max-lg:justify-center items-center">
             <Image
               src="/phone.svg"
@@ -121,7 +130,7 @@ const page = () => {
       </div>
       <form
         onSubmit={handleSubmit}
-        className="bg-blue-500d pt-8 pb-10 border-t flex flex-col items-center gap-5"
+        className="bg-blue-500d pt-8 pb-10 flex flex-col items-center gap-5 px-8"
       >
         <div className="name">
           <label htmlFor="name">

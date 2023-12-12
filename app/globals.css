@@ -173,6 +173,13 @@ textarea {
   @apply shadow-md px-5 py-3 border text-lg border-slate-300;
 }
 
+.name,
+.email,
+.phone,
+.message {
+  @apply text-lg;
+}
+
 /* Hamburger memu bars */
 .bar {
   @apply block w-[30px] h-[3px] my-[5px] mx-[auto] bg-black;
