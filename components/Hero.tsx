@@ -8,19 +8,21 @@ const Hero = () => {
       style={{ backgroundImage: 'url("bridge.JPG")' }}
     >
       {/* bg-red-500/30 */}
-      <section className="max-container padding-container flex items-center justify-center flex-col 2xl:pt-[0px] max-2xl:pt-[150px] max-xl:pt-[100px] max-lg:pt-[100px] max-md:pt-[100px] pb-[100px] h-screen ">
-        <div className="heroTextBox px-[40px] py-[25px] lg:mb-[70px] lg:mr-[550px] md:mr-[0px] rounded-3xl shadow-3xl flex justify-center flex-col text-white backdrop-blur-sm bg-slate-800/90">
-          <h1 className="font-bold lg:text-5xl md:text-4xl sm:text-3xl sm:p-0 text-center">
-            Global Vision,
-            <br></br>
-            Local Wisdom,
-            <br></br>
-            <span className="bg-clip-text text-transparent bg-gradient-to-b from-yellow-400 to-yellow-600">
+      <section className="bg-red-500d max-container padding-container flex items-center justify-center flex-col 2xl:pt-[0px] max-2xl:py-[330px] max-xl:py-[0px] max-lg:pt-[100px] max-md:pt-[100px] max:-sm:py-[0px] pb-[100px] h-screen">
+        <div className="heroTextBox px-[40px] py-[25px] max-sm:px-[25px] max-sm:py-[20px] 2xl:mb-[70px] 2xl:mr-[550px] max-2xl:mb-[75px] max-2xl:mr-[460px] max-xl:mb-[140px] max-xl:mr-[300px] max-lg:mb-[auto] max-lg:mr-[auto] rounded-3xl shadow-3xl flex justify-center flex-col text-white backdrop-blur-sm bg-slate-800/90 max-sm:bg-slate-800/40">
+          <h1 className="font-bold 2xl:text-5xl max-2xl:text-4xl max-xl:text-3xl max-sm:text-2xl text-center max-sm:tracking-tighter max-sm:leading-[22px]">
+            <span>
+              Global Vision,
+              <br></br>
+              Local Wisdom,
+              <br></br>
+            </span>
+            <span className="bg-clip-text text-transparent bg-gradient-to-b max-sm:bg-gradient-to-t from-yellow-400 to-yellow-600">
               Your Perfect Real Estate Partner.
             </span>
           </h1>
           <br></br>
-          <p className="px-4 pt-3 max-w-prose text-lg tracking-wider">
+          <p className="px-4 max-2xl:pt-3 max-xl:pt-0 max-w-prose 2xl:text-lg max-2xl:text-lg max-xl:text-base max-sm:text-base max-sm:p-0 max-sm:leading-5 tracking-wider max-sm:tracking-tight max-sm:font-semibold">
             ACJ International Realty LLC offers expert consulting services in
             the commercial real estate sector. We specialize in assisting
             international companies in expanding their business within New York
@@ -35,7 +37,7 @@ const Hero = () => {
             residential properties. */}
           </p>
           <br></br>
-          <span className="flex justify-end">
+          <span className="flex justify-end max-sm:justify-center">
             <Link href="/services">
               <Button
                 type="button"
