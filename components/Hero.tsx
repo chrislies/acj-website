@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Button from "./Button";
 import Link from "next/link";
 
@@ -39,12 +40,17 @@ const Hero = () => {
           <br></br>
           <span className="flex justify-end max-sm:justify-center">
             <Link href="/services">
-              <Button
-                type="button"
-                title="Learn More"
-                icon="https://www.svgrepo.com/show/533621/arrow-sm-right.svg"
-                variant="btn_services" // from globals.css
-              />
+              <button className="flex flex-row items-center gap-3 rounded-lg bg-yellow-600 hover:bg-[#d79c09] border border-yellow-900 px-6 py-2 text-white text-base tracking-wide font-semibold">
+                Learn More
+                <span>
+                  <Image
+                    src={"/right-arrow.svg"}
+                    alt={"Learn More"}
+                    width={20}
+                    height={20}
+                  />
+                </span>
+              </button>
             </Link>
           </span>
         </div>
