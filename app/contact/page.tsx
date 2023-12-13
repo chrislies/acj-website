@@ -107,8 +107,8 @@ const page = () => {
               height={22}
               className="max-lg:w-3 max-lg:h-3"
             />
-            <Link className="hover:underline" href="tel:9172952102">
-              917-295-2102
+            <Link className="hover:underline" href="tel:9297100869">
+              929-710-0869
             </Link>
           </div>
           <div className="flex lg:flex-row gap-2 lg:justify-end max-lg:justify-center items-center">
