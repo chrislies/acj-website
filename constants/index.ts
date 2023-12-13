@@ -1,4 +1,3 @@
-// NAVIGATION
 export const NAV_LINKS = [
   { href: "/", key: "home", label: "Home" },
   { href: "/about", key: "about", label: "About" },
@@ -6,77 +5,52 @@ export const NAV_LINKS = [
   { href: "/contact", key: "contact", label: "Contact" },
 ];
 
-// CAMP SECTION
-export const PEOPLE_URL = [
-  "/person-1.png",
-  "/person-2.png",
-  "/person-3.png",
-  "/person-4.png",
-];
-
-// FEATURES SECTION
-export const FEATURES = [
+export const CERTIFICATES = [
   {
-    title: "Real maps can be offline",
-    icon: "/map.svg",
-    variant: "green",
-    description:
-      "We provide a solution for you to be able to use our application when climbing, yes offline maps you can use at any time there is no signal at the location",
+    id: 1,
+    title: "New York State & City MWBE Certified",
+    src: "/nysc-mwbe.png",
   },
   {
-    title: "Set an adventure schedule",
-    icon: "/calendar.svg",
-    variant: "green",
-    description:
-      "Schedule an adventure with friends. On holidays, there are many interesting offers from Hilink. That way, there's no more discussion",
+    id: 2,
+    title:
+      "NY/NJ Port Authority - Certified Minority Women Business Enterprise",
+    src: "/portauthority-mwbe.png",
   },
   {
-    title: "Technology using augment reality",
-    icon: "/tech.svg",
-    variant: "green",
-    description:
-      "Technology uses augmented reality as a guide to your hiking trail in the forest to the top of the mountain. Already supported by the latest technology without an internet connection",
+    id: 3,
+    title: "NY/NJ Port Authority - Certified Small Business Enterprise",
+    src: "/portauthority-sbe.png",
   },
   {
-    title: "Many new locations every month",
-    icon: "/location.svg",
-    variant: "orange",
-    description:
-      "Lots of new locations every month, because we have a worldwide community of climbers who share their best experiences with climbing",
-  },
-];
-
-// FOOTER SECTION
-export const FOOTER_LINKS = [
-  {
-    title: "About",
-    links: [
-      "About Hilink",
-      "Press Releases",
-      "Environment",
-      "Jobs",
-      "Privacy Policy",
-      "Contact Us",
-    ],
+    id: 4,
+    title: "NY/NJ Port Authority - Certified Disadvantaged Business Enterprise",
+    src: "/portauthority-dbe.png",
   },
   {
-    title: "Services",
-    links: ["Climbing xixixi", "Hiking hilink", "Hilink kinthill"],
+    id: 5,
+    title:
+      "Small Business Administration - Women Owned Small Business Certified",
+    src: "/sba-wosb.png",
+  },
+  {
+    id: 6,
+    title:
+      "Small Business Administration - Economically Disadvantaged Women Owned Small Business Certified",
+    src: "/sba-edwosb.png",
+  },
+  {
+    id: 7,
+    title: "Small Business Administration - Emerging Leaders Certified",
+    src: "/sba-elc.png",
+  },
+  {
+    id: 8,
+    title:
+      "NYC Department of Housing Preservation & Development - Marketing Agent Certified",
+    src: "/hpd-mac.png",
   },
 ];
-
-export const FOOTER_CONTACT_INFO = {
-  title: "Contact Us",
-  links: [
-    { label: "Phone", value: "917-295-2102" },
-    { label: "Email", value: "hilink@akinthil.com" },
-  ],
-};
-
-export const SOCIALS = {
-  title: "Social",
-  links: ["/linkedIn.svg", "/instagram.svg"],
-};
 
 export const SERVICES = [
   {

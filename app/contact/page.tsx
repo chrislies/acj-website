@@ -97,8 +97,8 @@ const page = () => {
           </h1>
         </div>
       </div>
-      <div className="flex flex-row justify-center items-center bg-red-500d py-10">
-        <div className="bg-blue-500d lg:w-[45vw] max-lg:w-fit 2xl:text-xl max-lg:text-sm grid lg:grid-cols-2 lg:grid-rows-1 lg:grid-flow-row max-lg:grid-rows-2 max-lg:grid-flow-col">
+      <div className="flex flex-row justify-center items-center bg-red-500d pt-10 pb-2">
+        <div className="bg-blue-500d lg:w-[45vw] max-lg:w-fit 2xl:text-xl max-md:text-sm grid lg:grid-cols-2 lg:grid-rows-1 lg:grid-flow-row max-lg:grid-rows-2 max-lg:grid-flow-col">
           <div className="flex lg:flex-row gap-2 lg:justify-start max-lg:justify-center items-center">
             <Image
               src="/phone.svg"
@@ -130,7 +130,7 @@ const page = () => {
       </div>
       <form
         onSubmit={handleSubmit}
-        className="bg-blue-500d pt-8 pb-10 flex flex-col items-center gap-5 px-8"
+        className="bg-blue-500d pt-8 pb-10 flex flex-col items-center gap-5 2xl:px-[200px] max-2xl:px-[200px] max-xl:px-[100px] max-lg:px-8"
       >
         <div className="name">
           <label htmlFor="name">
