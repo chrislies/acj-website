@@ -44,11 +44,12 @@ const page = () => {
       </h4>
       <div className="gray-50 2xl:px-[500px] max-2xl:px-[350px] max-xl:px-[250px] max-lg:px-[150px] max-md:px-[120px] max-sm:px-[40px] pb-0 text-xl leading-8 tracking-tight flex flex-col justify-center items-center">
         <p className="">
-          At <span className="font-bold">ACJ International Realty LLC</span>, we
-          pride ourselves on being your one-stop destination for all things real
-          estate. Whether you're embarking on a new investment, seeking the
-          perfect rental, or selling your property, we're here to turn your real
-          estate goals into reality.
+          Through our diverse certifications, including minority and women-owned
+          business status and small business recognition, we actively
+          demonstrate our commitment to excellence and strategic innovation.
+          These credentials not only reflect our dedication to delivering unique
+          value to the real estate industry, but also showcase our strong ties
+          to and support for the local community.{" "}
         </p>
       </div>
       <div className="2xl:px-[200px] py-10 grid 2xl:grid-cols-3 place-items-center max-2xl:grid-cols-3 max-md:grid-cols-2 max-sm:flex max-sm:flex-col grid-flow-row 2xl:gap-[2rem] max-2xl:gap-[25px] max-xl:gap-[22px] max-lg:gap-[20px] max-md:gap-[25px] max-sm:gap-[20px]">
