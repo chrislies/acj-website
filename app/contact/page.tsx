@@ -32,10 +32,10 @@ const page = () => {
     });
 
     const { msg, success } = await res.json();
-    console.log("Server response:", { msg, success }); // Log the server response
+    // console.log("Server response:", { msg, success }); // Log the server response
 
     if (success) {
-      console.log("Form submitted successfully"); // Log successful form submission
+      // console.log("Form submitted successfully"); // Log successful form submission
       setName("");
       setEmail("");
       setPhone("");
@@ -48,7 +48,7 @@ const page = () => {
       });
       setSuccess(true);
     } else {
-      console.log("Form submission failed", msg); // Log failed form submission and error messages
+      // console.log("Form submission failed", msg); // Log failed form submission and error messages
       // Map error messages to input fields
       const errorMap: Record<string, string | string[]> = {};
       msg.forEach((err: string | string[]) => {
@@ -98,7 +98,7 @@ const page = () => {
           }
         }
       });
-      console.log("New errors:", { ...errors, ...errorMap }); // Log the new errors
+      // console.log("New errors:", { ...errors, ...errorMap }); // Log the new errors
 
       setErrors((prevErrors) => ({
         ...prevErrors, // Preserve existing values
