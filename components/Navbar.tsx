@@ -21,6 +21,7 @@ const Navbar = () => {
 
       if (
         isMenuOpen &&
+        event.target instanceof HTMLElement &&
         !event.target.closest(".menu-container") &&
         event.target !== menuButton
       ) {

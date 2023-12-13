@@ -8,7 +8,12 @@ const page = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [phone, setPhone] = useState("");
-  const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useState({
+    nameError: "",
+    emailError: "",
+    phoneError: "",
+    messageError: "",
+  });
   const [success, setSuccess] = useState(false);
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -27,60 +32,78 @@ const page = () => {
     });
 
     const { msg, success } = await res.json();
+    console.log("Server response:", { msg, success }); // Log the server response
 
     if (success) {
+      console.log("Form submitted successfully"); // Log successful form submission
       setName("");
       setEmail("");
       setPhone("");
       setMessage("");
-      setErrors({});
+      setErrors({
+        nameError: "",
+        emailError: "",
+        phoneError: "",
+        messageError: "",
+      });
       setSuccess(true);
     } else {
+      console.log("Form submission failed", msg); // Log failed form submission and error messages
       // Map error messages to input fields
-      const errorMap = {};
-      msg.forEach((err) => {
+      const errorMap: Record<string, string | string[]> = {};
+      msg.forEach((err: string | string[]) => {
         if (err.includes("Name")) {
-          errorMap.name = err;
-          document.querySelector(".name").scrollIntoView({
-            behavior: "smooth",
-            block: "center",
-            inline: "nearest",
-          });
+          errorMap.nameError = err;
+          const nameElement = document.querySelector(".name");
+          if (nameElement) {
+            nameElement.scrollIntoView({
+              behavior: "smooth",
+              block: "center",
+              inline: "nearest",
+            });
+          }
         } else if (err.includes("valid name")) {
-          errorMap.name = err;
-          document.querySelector(".name").scrollIntoView({
-            behavior: "smooth",
-            block: "center",
-            inline: "nearest",
-          });
+          errorMap.nameError = err;
+          const nameElement = document.querySelector(".name");
+          if (nameElement) {
+            nameElement.scrollIntoView({
+              behavior: "smooth",
+              block: "center",
+              inline: "nearest",
+            });
+          }
         } else if (err.includes("Email")) {
-          errorMap.email = err;
-          document.querySelector(".email").scrollIntoView({
-            behavior: "smooth",
-            block: "center",
-            inline: "nearest",
-          });
+          errorMap.emailError = err;
+          const emailElement = document.querySelector(".email");
+          if (emailElement) {
+            emailElement.scrollIntoView({
+              behavior: "smooth",
+              block: "center",
+              inline: "nearest",
+            });
+          }
         } else if (err.includes("Phone")) {
-          errorMap.phone = err;
+          errorMap.phoneError = err;
         } else if (err.includes("Message")) {
-          errorMap.message = err;
-          // document.querySelector(".message").scrollIntoView({
-          //   behavior: "smooth",
-          //   block: "center",
-          //   inline: "nearest",
-          // });
+          errorMap.messageError = err;
         } else {
-          // Handle other types of errors, including "Invalid email address"
-          errorMap.email = err;
-          document.querySelector(".email").scrollIntoView({
-            behavior: "smooth",
-            block: "center",
-            inline: "nearest",
-          });
+          errorMap.emailError = err;
+          const emailElement = document.querySelector(".email");
+          if (emailElement) {
+            emailElement.scrollIntoView({
+              behavior: "smooth",
+              block: "center",
+              inline: "nearest",
+            });
+          }
         }
       });
+      console.log("New errors:", { ...errors, ...errorMap }); // Log the new errors
 
-      setErrors(errorMap);
+      setErrors((prevErrors) => ({
+        ...prevErrors, // Preserve existing values
+        ...errorMap, // Update with new values
+      }));
       setSuccess(false);
     }
   };
@@ -137,15 +160,21 @@ const page = () => {
             Name<span className="text-red-500">*</span>
           </label>
           <input
-            onChange={(event) => setName(event.target.value)}
+            onChange={(event) => {
+              setName(event.target.value);
+              // Clear the error when the user starts typing
+              setErrors((prevErrors) => ({ ...prevErrors, nameError: "" }));
+            }}
             value={name}
             type="text"
             id="name"
             placeholder=""
-            className={`${errors.name ? "border-red-500" : "border-slate-300"}`}
+            className={`${
+              errors.nameError ? "border-red-500" : "border-slate-300"
+            }`}
           />
           <span id="nameError" className="text-red-600">
-            {errors.name}
+            {errors.nameError}
           </span>
         </div>
 
@@ -154,17 +183,21 @@ const page = () => {
             Email<span className="text-red-500">*</span>
           </label>
           <input
-            onChange={(event) => setEmail(event.target.value)}
+            onChange={(event) => {
+              setEmail(event.target.value);
+              // Clear the error when the user starts typing
+              setErrors((prevErrors) => ({ ...prevErrors, emailError: "" }));
+            }}
             value={email}
             type="text"
             id="email"
             placeholder=""
             className={`${
-              errors.email ? "border-red-500" : "border-slate-300"
+              errors.emailError ? "border-red-500" : "border-slate-300"
             }`}
           />
           <span id="emailError" className="text-red-600">
-            {errors.email}
+            {errors.emailError}
           </span>
         </div>
 
@@ -178,7 +211,7 @@ const page = () => {
             placeholder=""
           />
           <span id="phoneError" className="text-red-600">
-            {errors.phone}
+            {errors.phoneError}
           </span>
         </div>
 
@@ -187,17 +220,21 @@ const page = () => {
             Message<span className="text-red-500">*</span>
           </label>
           <textarea
-            onChange={(event) => setMessage(event.target.value)}
+            onChange={(event) => {
+              setMessage(event.target.value);
+              // Clear the error when the user starts typing
+              setErrors((prevErrors) => ({ ...prevErrors, messageError: "" }));
+            }}
             value={message}
             style={{ minHeight: "128px", resize: "vertical" }}
             id="message"
             placeholder=""
             className={`${
-              errors.message ? "border-red-500" : "border-slate-300"
+              errors.messageError ? "border-red-500" : "border-slate-300"
             }`}
           ></textarea>
           <span id="messageError" className="text-red-600">
-            {errors.message}
+            {errors.messageError}
           </span>
         </div>
 
