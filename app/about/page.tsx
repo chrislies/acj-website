@@ -30,7 +30,7 @@ const page = () => {
         </p>
         <br />
         <p>
-          Established in 2015, Julie Huang embarked on a mission to assist
+          Established in 2016, Julie Huang embarked on a mission to assist
           foreign-based companies in expanding their presence in New York and
           New Jersey. As we continue to grow, our commitment remains on
           delivering exceptional real estate services and solutions, creating
