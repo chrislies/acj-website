@@ -66,7 +66,7 @@ const page = () => {
                 height={1000}
                 className="p-5"
               />
-              <div className="overlay flex flex-col gap-4 absolute opacity-0 bottom-0 p-1 text-white text-center bg-black/90 w-full duration-500 ease-in-out transition-all">
+              <div className="overlay flex flex-col gap-4 absolute opacity-0 bottom-0 rounded-b-lg p-1 text-white text-center bg-black/90 w-full duration-500 ease-in-out transition-all">
                 <div>{cert.title}</div>
                 {cert.href ? (
                   <div className="underline underline-offset-2 text-blue-500">
