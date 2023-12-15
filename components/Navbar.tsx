@@ -40,7 +40,12 @@ const Navbar = () => {
     <div className="sticky top-0 z-[999] bg-white shadow-3xl">
       <nav className="flexBetween max-container padding-container relative z-30 py-1 max-w-full">
         <Link href="/">
-          <Image src="/acj-logo.png" alt="logo" width={140} height={1} />
+          <Image
+            src="/compressed_images/acj-logo.webp"
+            alt="logo"
+            width={140}
+            height={1}
+          />
         </Link>
 
         <ul className="hidden h-full gap-16 lg:flex">

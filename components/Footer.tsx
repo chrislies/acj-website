@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="grid lg:grid-cols-3 max-lg:grid-cols-1 max-lg:gap-5 lg:justify-items-center max-lg:justify-items-start items-start lg:text-base max-lg:text-xs font-semibold">
           <Link href="/">
             <Image
-              src="/acj-logo.png"
+              src="/compressed_images/acj-logo.webp"
               alt="logo"
               width={150}
               height={1}
@@ -29,7 +29,7 @@ const Footer = () => {
           <div className="flex flex-col items-start gap-5">
             <div className="flex flex-row gap-2 items-center">
               <Image
-                src="/phone.svg"
+                src="/images/phone.svg"
                 alt="phone"
                 width={22}
                 height={22}
@@ -41,7 +41,7 @@ const Footer = () => {
             </div>
             <div className="flex flex-row gap-2 items-center">
               <Image
-                src="/mail.svg"
+                src="/images/mail.svg"
                 alt="email"
                 width={22}
                 height={22}

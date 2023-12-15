@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <div
       className="bg-cover bg-no-repeat bg-center bg-gray-900"
-      style={{ backgroundImage: 'url("bridge.JPG")' }}
+      style={{ backgroundImage: 'url("/compressed_images/bridge.webp")' }}
     >
       {/* bg-red-500/30 */}
       <section className="bg-red-500d max-container padding-container flex items-center justify-center flex-col 2xl:pt-[0px] max-2xl:py-[330px] max-xl:py-[0px] max-lg:pt-[100px] max-md:pt-[100px] max:-sm:py-[0px] pb-[100px] h-screen">
@@ -44,7 +44,7 @@ const Hero = () => {
                 Learn More
                 <span className="arrow-span">
                   <Image
-                    src={"/right-arrow.svg"}
+                    src={"/images/right-arrow.svg"}
                     alt={"arrow"}
                     width={20}
                     height={20}

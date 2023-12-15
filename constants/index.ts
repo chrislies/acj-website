@@ -9,46 +9,46 @@ export const CERTIFICATES = [
   {
     id: 1,
     title: "New York State & City MWBE Certified",
-    src: "/nysc-mwbe.png",
+    src: "/compressed_images/nysc-mwbe.webp",
   },
   {
     id: 2,
     title:
       "NY/NJ Port Authority - Certified Minority Women Business Enterprise",
-    src: "/portauthority-mwbe.png",
+    src: "/compressed_images/portauthority-mwbe.webp",
   },
   {
     id: 3,
     title: "NY/NJ Port Authority - Certified Small Business Enterprise",
-    src: "/portauthority-sbe.png",
+    src: "/compressed_images/portauthority-sbe.webp",
   },
   {
     id: 4,
     title: "NY/NJ Port Authority - Certified Disadvantaged Business Enterprise",
-    src: "/portauthority-dbe.png",
+    src: "/compressed_images/portauthority-dbe.webp",
   },
   {
     id: 5,
     title:
       "Small Business Administration - Women Owned Small Business Certified",
-    src: "/sba-wosb.png",
+    src: "/compressed_images/sba-wosb.webp",
   },
   {
     id: 6,
     title:
       "Small Business Administration - Economically Disadvantaged Women Owned Small Business Certified",
-    src: "/sba-edwosb.png",
+    src: "/compressed_images/sba-edwosb.webp",
   },
   {
     id: 7,
     title: "Small Business Administration - Emerging Leaders Certified",
-    src: "/sba-elc.png",
+    src: "/compressed_images/sba-elc.webp",
   },
   {
     id: 8,
     title:
       "NYC Department of Housing Preservation & Development - Marketing Agent Certified",
-    src: "/hpd-mac.png",
+    src: "/compressed_images/hpd-mac.webp",
   },
 ];
 

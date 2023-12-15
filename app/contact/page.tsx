@@ -112,7 +112,7 @@ const page = () => {
     <section>
       <div
         className="flex justify-center bg-cover bg-no-repeat bg-center h-[30vh]"
-        style={{ backgroundImage: 'url("worldmap.jpg")' }}
+        style={{ backgroundImage: 'url("/compressed_images/worldmap.webp")' }}
       >
         <div className="backdrop-blur-[3px] bg-white/20 w-full h-full flex flex-col justify-center items-center">
           <h1 className="font-bold lg:text-6xl max-lg:text-5xl max-sm:text-4xl tracking-tight leading-[70px]">
@@ -124,7 +124,7 @@ const page = () => {
         <div className="bg-blue-500d lg:w-[45vw] max-lg:w-fit 2xl:text-xl max-md:text-sm grid lg:grid-cols-2 lg:grid-rows-1 lg:grid-flow-row max-lg:grid-rows-2 max-lg:grid-flow-col">
           <div className="flex lg:flex-row gap-2 lg:justify-start max-lg:justify-center items-center">
             <Image
-              src="/phone.svg"
+              src="/images/phone.svg"
               alt="phone"
               width={22}
               height={22}
@@ -136,7 +136,7 @@ const page = () => {
           </div>
           <div className="flex lg:flex-row gap-2 lg:justify-end max-lg:justify-center items-center">
             <Image
-              src="/mail.svg"
+              src="/images/mail.svg"
               alt="email"
               width={22}
               height={22}
