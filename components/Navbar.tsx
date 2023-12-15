@@ -50,14 +50,15 @@ const Navbar = () => {
 
         <ul className="hidden h-full gap-16 lg:flex">
           {NAV_LINKS.map((link) => (
-            <Link
-              href={link.href}
-              key={link.key}
-              onClick={closeMenu}
-              className="text-base font-semibold text-grey-50 flexCenter cursor-pointer border-y-2 border-transparent hover:border-b-yellow-600/70 transition-all duration-300 ease-in-out"
-            >
-              {link.label}
-            </Link>
+            <li key={link.key}>
+              <Link
+                href={link.href}
+                onClick={closeMenu}
+                className="text-base font-semibold text-grey-50 flexCenter cursor-pointer border-y-2 border-transparent hover:border-b-yellow-600/70 transition-all duration-300 ease-in-out"
+              >
+                {link.label}
+              </Link>
+            </li>
           ))}
         </ul>
 
