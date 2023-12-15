@@ -40,12 +40,12 @@ const Hero = () => {
           <br></br>
           <span className="flex justify-end max-sm:justify-center">
             <Link href="/services">
-              <button className="learn-btn flex flex-row items-center gap-2 rounded-lg bg-yellow-600 hover:bg-[#d79c09] border border-yellow-900 px-6 py-2 text-white text-base tracking-wide font-semibold">
+              <button className="learn-btn flex flex-row items-center gap-2 rounded-lg bg-yellow-600 hover:bg-[#d79c09] border border-yellow-900 px-6 py-2 text-black text-base tracking-wide font-semibold">
                 Learn More
                 <span className="arrow-span">
                   <Image
                     src={"/right-arrow.svg"}
-                    alt={"Learn More"}
+                    alt={"arrow"}
                     width={20}
                     height={20}
                   />
