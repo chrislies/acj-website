@@ -18,25 +18,24 @@ const page = () => {
           {/* <div className="border-b-4 border-white w-[12%]" /> */}
         </div>
       </div>
-      <div className="gray-50 2xl:px-[500px] max-2xl:px-[350px] max-xl:px-[250px] max-lg:px-[150px] max-md:px-[120px] max-sm:px-[40px] py-12 text-xl leading-8 tracking-tight flex flex-col justify-center items-center">
+      <div className="gray-50 2xl:px-[500px] max-2xl:px-[350px] max-xl:px-[250px] max-lg:px-[150px] max-md:px-[120px] max-sm:px-[40px] py-12 text-xl leading-8 tracking-tight flex flex-col justify-center items-center gap-8">
         {/* flex flex-col items-center */}
-        <p className="">
+        <div className="">
           <strong>ACJ International Realty LLC </strong>
           is a certified New York State and City Minority Women Business
           Enterprise (MWBE) real estate consulting firm with over 20 years of
           experience. Our specialization in property management, leasing,
           acquisitions, and strategic development follows a client-centric
           approach tailoring services to individual needs.{" "}
-        </p>
-        <br />
-        <p>
+        </div>
+        <div>
           Established in 2016, Julie Huang embarked on a mission to assist
           foreign-based companies in expanding their presence in New York and
           New Jersey. As we continue to grow, our commitment remains on
           delivering exceptional real estate services and solutions, creating
           lasting partnerships, and contributing positively to the growth and
           success of our clients in the ever-changing real estate landscape.
-        </p>
+        </div>
       </div>
       <div className="border-b-2 border-slate-300 w-[90vw] mx-auto block" />
       <h4 className="max-container px-10 py-10 text-4xl max-sm:text-3xl underline font-bold justify-self-start">
