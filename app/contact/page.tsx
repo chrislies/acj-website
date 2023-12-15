@@ -131,7 +131,7 @@ const page = () => {
       </div>
       <div className="flex flex-row justify-center items-center bg-red-500d pt-10 pb-2">
         <div className="bg-blue-500d lg:w-[45vw] max-lg:w-fit 2xl:text-xl max-md:text-sm grid lg:grid-cols-2 lg:grid-rows-1 lg:grid-flow-row max-lg:grid-rows-2 max-lg:grid-flow-col">
-          <div className="flex lg:flex-row gap-1 lg:justify-start max-lg:justify-center items-center">
+          <div className="flex lg:flex-row gap-2 lg:justify-start max-lg:justify-center items-center">
             <Image
               src="/images/phone.svg"
               alt="phone"
