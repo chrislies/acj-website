@@ -16,30 +16,37 @@ const page = () => {
           </h1>
         </div>
       </div>
-      <div className="gray-50 bg-[#F3F4F6] 2xl:px-[500px] max-2xl:px-[350px] max-xl:px-[250px] max-lg:px-[150px] max-md:px-[120px] max-sm:px-[40px] py-12 text-xl leading-8 tracking-tight flex flex-col justify-center items-center gap-8">
-        <div className="">
-          <strong>ACJ International Realty LLC </strong>
-          is a certified New York State and City Minority Women Business
-          Enterprise (MWBE) real estate consulting firm with over 20 years of
-          experience. Our specialization in property management, leasing,
-          acquisitions, and strategic development follows a client-centric
-          approach tailoring services to individual needs.{" "}
-        </div>
-        <div>
-          Established in 2016, Julie Huang embarked on a mission to assist
-          foreign-based companies in expanding their presence in New York and
-          New Jersey. As we continue to grow, our commitment remains on
-          delivering exceptional real estate services and solutions, creating
-          lasting partnerships, and contributing positively to the growth and
-          success of our clients in the ever-changing real estate landscape.
+      <div className="gray-50 bg-[#f5f5f7] 2xl:px-[500px] max-2xl:px-[350px] max-xl:px-[250px] max-lg:px-[150px] max-md:px-[60px] max-sm:px-[20px] py-12">
+        <div className="bg-[#ffffff] leading-[1.47059] 2xl:px-8 2xl:py-6 max-2xl:px-8 max-2xl:py-6 max-md:px-5 max-md:py-3 max-sm:px-3 max-sm:py-2 rounded-3xl max-sm:rounded-xl text-xl tracking-tight flex flex-col justify-center items-center gap-8">
+          <div>
+            <p>
+              <strong>ACJ International Realty LLC </strong>
+              is a certified New York State and City Minority Women Business
+              Enterprise (MWBE) real estate consulting firm with over 20 years
+              of experience. Our specialization in property management, leasing,
+              acquisitions, and strategic development follows a client-centric
+              approach tailoring services to individual needs.{" "}
+            </p>
+          </div>
+          <div>
+            <p>
+              Established in 2016, Julie Huang embarked on a mission to assist
+              foreign-based companies in expanding their presence in New York
+              and New Jersey. As we continue to grow, our commitment remains on
+              delivering exceptional real estate services and solutions,
+              creating lasting partnerships, and contributing positively to the
+              growth and success of our clients in the ever-changing real estate
+              landscape.
+            </p>
+          </div>
         </div>
       </div>
       {/* <div className="border-b-2 border-slate-300 w-[90vw] mx-auto block" /> */}
-      <div className="bg-[#fdfdfd]">
-        <h4 className="max-container px-10 py-10 text-4xl max-sm:text-3xl underline font-bold justify-self-start">
+      <div className="bg-[#ffffff]">
+        <h4 className="max-container px-10 py-6 text-4xl max-sm:text-3xl underlined font-bold justify-self-start">
           Company Certifications
         </h4>
-        <div className="gray-50 2xl:px-[500px] max-2xl:px-[350px] max-xl:px-[250px] max-lg:px-[150px] max-md:px-[120px] max-sm:px-[40px] pb-0 text-xl leading-8 tracking-tight flex flex-col justify-center items-center">
+        <div className="gray-50 leading-[1.47059] 2xl:px-[500px] max-2xl:px-[350px] max-xl:px-[250px] max-lg:px-[150px] max-md:px-[60px] max-sm:px-[40px] pb-0 text-xl tracking-tight flex flex-col justify-center items-center">
           <p className="">
             Through our diverse certifications, including minority and
             women-owned business status and small business recognition, we
