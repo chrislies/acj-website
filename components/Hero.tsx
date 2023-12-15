@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Button from "./Button";
 import Link from "next/link";
 
 const Hero = () => {
@@ -40,8 +39,8 @@ const Hero = () => {
           <br></br>
           <span className="flex justify-end max-sm:justify-center">
             <Link href="/services">
-              <button className="learn-btn flex flex-row items-center gap-2 rounded-lg bg-yellow-600 hover:bg-[#d79c09] border border-yellow-900 px-6 py-2 text-black text-base tracking-wide font-semibold">
-                Learn More
+              <button className="learn-btn flex flex-row items-center gap-2 rounded-lg bg-yellow-600 hover:bg-[#d79c09] border border-yellow-900 px-5 py-2 text-black text-base tracking-wide font-semibold">
+                Our Services
                 <span className="arrow-span">
                   <Image
                     src={"/images/right-arrow.svg"}
