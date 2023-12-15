@@ -10,45 +10,53 @@ export const CERTIFICATES = [
     id: 1,
     title: "New York State & City MWBE Certified",
     src: "/compressed_images/nysc-mwbe.webp",
+    href: "",
   },
   {
     id: 2,
     title:
       "NY/NJ Port Authority - Certified Minority Women Business Enterprise",
     src: "/compressed_images/portauthority-mwbe.webp",
+    href: "",
   },
   {
     id: 3,
     title: "NY/NJ Port Authority - Certified Small Business Enterprise",
     src: "/compressed_images/portauthority-sbe.webp",
+    href: "",
   },
   {
     id: 4,
     title: "NY/NJ Port Authority - Certified Disadvantaged Business Enterprise",
     src: "/compressed_images/portauthority-dbe.webp",
+    href: "",
   },
   {
     id: 5,
     title:
       "Small Business Administration - Women Owned Small Business Certified",
     src: "/compressed_images/sba-wosb.webp",
+    href: "",
   },
   {
     id: 6,
     title:
       "Small Business Administration - Economically Disadvantaged Women Owned Small Business Certified",
     src: "/compressed_images/sba-edwosb.webp",
+    href: "",
   },
   {
     id: 7,
     title: "Small Business Administration - Emerging Leaders Certified",
     src: "/compressed_images/sba-elc.webp",
+    href: "",
   },
   {
     id: 8,
     title:
       "NYC Department of Housing Preservation & Development - Marketing Agent Certified",
     src: "/compressed_images/hpd-mac.webp",
+    href: "https://www.nyc.gov/site/hpd/services-and-information/marketing-agent-training.page",
   },
 ];
 

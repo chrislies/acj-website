@@ -58,13 +58,30 @@ const page = () => {
         </div>
         <div className="2xl:px-[200px] py-10 grid 2xl:grid-cols-3 place-items-center max-2xl:grid-cols-3 max-md:grid-cols-2 max-sm:flex max-sm:flex-col grid-flow-row 2xl:gap-[2rem] max-2xl:gap-[25px] max-xl:gap-[22px] max-lg:gap-[20px] max-md:gap-[25px] max-sm:gap-[20px]">
           {CERTIFICATES.map((cert) => (
-            <div className="bg-[#FEFEFE] border border-black/10 rounded-lg shadow-xl 2xl:w-[320px] max-2xl:w-[310px] max-xl:w-[250px] max-lg:w-[220px] max-md:w-[260px] p-5">
+            <div className="container relative border border-black/10 rounded-lg shadow-xl 2xl:w-[320px] max-2xl:w-[310px] max-xl:w-[250px] max-lg:w-[220px] max-md:w-[260px] ">
               <Image
                 src={cert.src}
                 alt={cert.title}
                 width={1000}
                 height={1000}
+                className="p-5"
               />
+              <div className="overlay flex flex-col gap-4 absolute opacity-0 bottom-0 p-1 text-white text-center bg-black/90 w-full duration-500 ease-in-out transition-all">
+                <div>{cert.title}</div>
+                {cert.href ? (
+                  <div className="underline underline-offset-2 text-blue-500">
+                    <Link
+                      href={cert.href}
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      Read More
+                    </Link>
+                  </div>
+                ) : (
+                  ""
+                )}
+              </div>
             </div>
           ))}
         </div>
