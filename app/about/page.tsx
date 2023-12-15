@@ -11,15 +11,12 @@ const page = () => {
         style={{ backgroundImage: 'url("/compressed_images/nyc.webp")' }}
       >
         <div className="bg-slate-700/40 backdrop-blur-sm w-full h-full flex flex-col justify-center items-center">
-          {/* <div className="border-b-4 border-white w-[11%]" /> */}
           <h1 className="font-bold lg:text-6xl max-lg:text-5xl max-sm:text-4xl text-white tracking-tight leading-[70px]">
             About Us
           </h1>
-          {/* <div className="border-b-4 border-white w-[12%]" /> */}
         </div>
       </div>
-      <div className="gray-50 2xl:px-[500px] max-2xl:px-[350px] max-xl:px-[250px] max-lg:px-[150px] max-md:px-[120px] max-sm:px-[40px] py-12 text-xl leading-8 tracking-tight flex flex-col justify-center items-center gap-8">
-        {/* flex flex-col items-center */}
+      <div className="gray-50 bg-[#F3F4F6] 2xl:px-[500px] max-2xl:px-[350px] max-xl:px-[250px] max-lg:px-[150px] max-md:px-[120px] max-sm:px-[40px] py-12 text-xl leading-8 tracking-tight flex flex-col justify-center items-center gap-8">
         <div className="">
           <strong>ACJ International Realty LLC </strong>
           is a certified New York State and City Minority Women Business
@@ -37,26 +34,33 @@ const page = () => {
           success of our clients in the ever-changing real estate landscape.
         </div>
       </div>
-      <div className="border-b-2 border-slate-300 w-[90vw] mx-auto block" />
-      <h4 className="max-container px-10 py-10 text-4xl max-sm:text-3xl underline font-bold justify-self-start">
-        Company Certifications
-      </h4>
-      <div className="gray-50 2xl:px-[500px] max-2xl:px-[350px] max-xl:px-[250px] max-lg:px-[150px] max-md:px-[120px] max-sm:px-[40px] pb-0 text-xl leading-8 tracking-tight flex flex-col justify-center items-center">
-        <p className="">
-          Through our diverse certifications, including minority and women-owned
-          business status and small business recognition, we actively
-          demonstrate our commitment to excellence and strategic innovation.
-          These credentials not only reflect our dedication to delivering unique
-          value to the real estate industry, but also showcase our strong ties
-          to and support for the local community.{" "}
-        </p>
-      </div>
-      <div className="2xl:px-[200px] py-10 grid 2xl:grid-cols-3 place-items-center max-2xl:grid-cols-3 max-md:grid-cols-2 max-sm:flex max-sm:flex-col grid-flow-row 2xl:gap-[2rem] max-2xl:gap-[25px] max-xl:gap-[22px] max-lg:gap-[20px] max-md:gap-[25px] max-sm:gap-[20px]">
-        {CERTIFICATES.map((cert) => (
-          <div className="bg-[#FEFEFE] border border-black/10 rounded-lg shadow-xl 2xl:w-[320px] max-2xl:w-[310px] max-xl:w-[250px] max-lg:w-[220px] max-md:w-[260px] p-5">
-            <Image src={cert.src} alt={cert.title} width={1000} height={1000} />
-          </div>
-        ))}
+      {/* <div className="border-b-2 border-slate-300 w-[90vw] mx-auto block" /> */}
+      <div className="bg-[#fdfdfd]">
+        <h4 className="max-container px-10 py-10 text-4xl max-sm:text-3xl underline font-bold justify-self-start">
+          Company Certifications
+        </h4>
+        <div className="gray-50 2xl:px-[500px] max-2xl:px-[350px] max-xl:px-[250px] max-lg:px-[150px] max-md:px-[120px] max-sm:px-[40px] pb-0 text-xl leading-8 tracking-tight flex flex-col justify-center items-center">
+          <p className="">
+            Through our diverse certifications, including minority and
+            women-owned business status and small business recognition, we
+            actively demonstrate our commitment to excellence and strategic
+            innovation. These credentials not only reflect our dedication to
+            delivering unique value to the real estate industry, but also
+            showcase our strong ties to and support for the local community.{" "}
+          </p>
+        </div>
+        <div className="2xl:px-[200px] py-10 grid 2xl:grid-cols-3 place-items-center max-2xl:grid-cols-3 max-md:grid-cols-2 max-sm:flex max-sm:flex-col grid-flow-row 2xl:gap-[2rem] max-2xl:gap-[25px] max-xl:gap-[22px] max-lg:gap-[20px] max-md:gap-[25px] max-sm:gap-[20px]">
+          {CERTIFICATES.map((cert) => (
+            <div className="bg-[#FEFEFE] border border-black/10 rounded-lg shadow-xl 2xl:w-[320px] max-2xl:w-[310px] max-xl:w-[250px] max-lg:w-[220px] max-md:w-[260px] p-5">
+              <Image
+                src={cert.src}
+                alt={cert.title}
+                width={1000}
+                height={1000}
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
