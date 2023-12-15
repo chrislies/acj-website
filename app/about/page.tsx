@@ -16,7 +16,7 @@ const page = () => {
           </h1>
         </div>
       </div>
-      <div className="gray-50 bg-[#f5f5f7] 2xl:px-[500px] max-2xl:px-[350px] max-xl:px-[250px] max-lg:px-[150px] max-md:px-[60px] max-sm:px-[20px] py-12">
+      <div className="gray-50 bg-[#f5f5f7] 2xl:px-[500px] max-2xl:px-[350px] max-xl:px-[250px] max-lg:px-[150px] max-md:px-[60px] max-sm:px-[40px] py-12">
         <div className="bg-[#ffffff] leading-[1.47059] 2xl:px-8 2xl:py-6 max-2xl:px-8 max-2xl:py-6 max-md:px-5 max-md:py-3 max-sm:px-3 max-sm:py-2 rounded-3xl max-sm:rounded-xl text-xl tracking-tight flex flex-col justify-center items-center gap-8">
           <div>
             <p>
