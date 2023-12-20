@@ -17,20 +17,11 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      const menuButton = document.getElementById("menu-button");
-
-      if (
-        isMenuOpen &&
-        event.target instanceof HTMLElement &&
-        !event.target.closest(".menu-container") &&
-        event.target !== menuButton
-      ) {
+      if (isMenuOpen) {
         closeMenu();
       }
     };
-
     document.addEventListener("click", handleClickOutside);
-
     return () => {
       document.removeEventListener("click", handleClickOutside);
     };
@@ -71,14 +62,17 @@ const Navbar = () => {
       </nav>
       {/* prettier-ignore */}
       {isMenuOpen && (
-        <div className="lg:hidden menu-container absolute top-full left-0 w-full bg-white border-t-2 flex flex-col shadow-3xl">
+        <div
+          id="menu-container"
+          className="lg:hidden absolute top-full left-0 w-full h-screen bg-black bg-opacity-40 backdrop-blur-[2px] border-t-2 flex flex-col shadow-3xl"
+        >
           {NAV_LINKS.map((link) => (
             <Link
               href={link.href}
               key={link.key}
               onClick={closeMenu}
               className={`${link.href === "/contact" ? "" : "border-b-2"} 
-              py-4 text-xl text-grey-50 flexCenter cursor-pointer font-[500] tracking-tight hover:text-yellow-700 transition-all duration-100 ease-in-out active:text-yellow-600/70`}
+              bg-white py-4 text-xl text-grey-50 flexCenter cursor-pointer font-[500] tracking-tight hover:text-yellow-700 transition-all duration-100 ease-in-out active:text-yellow-600/70`}
             >
               {link.label}
             </Link>
