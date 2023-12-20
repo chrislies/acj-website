@@ -196,3 +196,6 @@ textarea {
 .container:hover .overlay {
   opacity: 1;
 }
+.container:hover .img {
+  @apply p-[15px];
+}
