@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { RightArrow } from "@/components/svgs";
 import Link from "next/link";
 
 const Hero = () => {
@@ -42,12 +43,7 @@ const Hero = () => {
               <button className="learn-btn flex flex-row items-center gap-2 rounded-lg bg-yellow-600 hover:bg-[#d79c09] border border-yellow-900 px-5 py-2 text-black text-base tracking-wide font-semibold">
                 Our Services
                 <span className="arrow-span">
-                  <Image
-                    src={"/images/right-arrow.svg"}
-                    alt={"arrow"}
-                    width={20}
-                    height={20}
-                  />
+                  <RightArrow className="h-[20px]"></RightArrow>
                 </span>
               </button>
             </Link>

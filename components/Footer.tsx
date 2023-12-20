@@ -1,6 +1,7 @@
 import { NAV_LINKS } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
+import { Mail, Phone } from "./svgs";
 
 const Footer = () => {
   return (
@@ -28,25 +29,13 @@ const Footer = () => {
           </div>
           <div className="flex flex-col items-start gap-5">
             <div className="flex flex-row gap-2 items-center">
-              <Image
-                src="/images/phone.svg"
-                alt="phone"
-                width={22}
-                height={22}
-                className="max-lg:w-3 max-lg:h-3"
-              ></Image>
+              <Phone className="h-[20px] max-lg:h-3"></Phone>
               <Link className="hover:underline" href="tel:9297100869">
                 929-710-0869
               </Link>
             </div>
             <div className="flex flex-row gap-2 items-center">
-              <Image
-                src="/images/mail.svg"
-                alt="email"
-                width={22}
-                height={22}
-                className="max-lg:w-3 max-lg:h-3"
-              ></Image>
+              <Mail className="h-[20px] max-lg:h-3"></Mail>
               <Link
                 className="hover:underline"
                 href="mailto:info@acjinternationalrealty.com"

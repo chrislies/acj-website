@@ -42,7 +42,7 @@ const page = () => {
         </div>
       </div>
       {/* <div className="border-b-2 border-slate-300 w-[90vw] mx-auto block" /> */}
-      <div className="bg-[#ffffff]">
+      <div className="bg-[#ffffff] min-h-screen">
         <h4 className="max-container px-10 py-6 text-4xl max-sm:text-3xl underlined font-bold justify-self-start">
           Company Certifications
         </h4>

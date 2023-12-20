@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const services = () => {
   return (
-    <section className="py-10 lg:px-20 xl:px-49 flex flex-col items-center bg-[#F5F5F5]">
+    <section className="py-10 lg:px-20 xl:px-49 flex flex-col items-center bg-[#F5F5F5] min-h-screen">
       {/* h-[calc(100vh-6rem)] */}
       {/* md:h-[calc(100vh-9rem)] */}
       <div className="flex flex-col items-center text-center">
