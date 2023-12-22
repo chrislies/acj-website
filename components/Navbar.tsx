@@ -28,57 +28,86 @@ const Navbar = () => {
   }, [isMenuOpen]);
 
   return (
-    <div className="sticky top-0 z-[999] bg-white shadow-3xl">
-      <nav className="flexBetween max-container padding-container relative z-30 py-1 max-w-full">
-        <Link href="/">
-          <Image
-            src="/compressed_images/acj-logo.webp"
-            alt="logo"
-            width={140}
-            height={1}
-          />
-        </Link>
+    <div className="sticky top-0 z-40">
+      <div
+        className={`sticky top-0 z-40 bg-white ${
+          isMenuOpen ? "shadow-md" : "shadow-3xl"
+        } transition-all duration-[900ms]`}
+      >
+        <nav className="flexBetween max-container padding-container relative z-30 py-1 max-w-full">
+          <Link href="/">
+            <Image
+              src="/compressed_images/acj-logo.webp"
+              alt="logo"
+              width={140}
+              height={1}
+            />
+          </Link>
+          <ul className="hidden h-full gap-16 lg:flex">
+            {NAV_LINKS.map((link) => (
+              <li key={link.key}>
+                <Link
+                  href={link.href}
+                  onClick={closeMenu}
+                  className="text-base font-semibold text-grey-50 flexCenter cursor-pointer border-y-2 border-transparent hover:border-b-yellow-600/70 transition-all duration-300 ease-in-out"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <div
+            id="menu-button"
+            onClick={toggleMenu}
+            className="lg:hidden cursor-pointer"
+          >
+            <span
+              className={`bar ${
+                isMenuOpen ? "rotate-45 translate-y-[8px]" : ""
+              } ease-in-out duration-300 transition-all`}
+            ></span>
+            <span
+              className={`bar ${
+                isMenuOpen ? "opacity-0 bg-white" : ""
+              } ease-in-out duration-50 transition-all`}
+            ></span>
+            <span
+              className={`bar ${
+                isMenuOpen ? "rotate-[-45deg] translate-y-[-8px]" : ""
+              } ease-in-out duration-300 transition-all`}
+            ></span>
+          </div>
+        </nav>
+      </div>
 
-        <ul className="hidden h-full gap-16 lg:flex">
-          {NAV_LINKS.map((link) => (
-            <li key={link.key}>
-              <Link
-                href={link.href}
-                onClick={closeMenu}
-                className="text-base font-semibold text-grey-50 flexCenter cursor-pointer border-y-2 border-transparent hover:border-b-yellow-600/70 transition-all duration-300 ease-in-out"
-              >
-                {link.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-
-        {/* prettier-ignore */}
-        <div id="menu-button" onClick={toggleMenu} className="lg:hidden cursor-pointer">
-          <span className={`bar ${isMenuOpen ? "rotate-45 translate-y-[8px]" : ""} ease-in-out duration-300 transition-all`}></span>
-          <span className={`bar ${isMenuOpen ? "opacity-0 bg-white" : ""} ease-in-out duration-50 transition-all`}></span>
-          <span className={`bar ${isMenuOpen ? "rotate-[-45deg] translate-y-[-8px]" : "" } ease-in-out duration-300 transition-all`}></span>
-        </div>
-      </nav>
-      {/* prettier-ignore */}
-      {isMenuOpen && (
+      <div className="lg:hidden relative z-20">
         <div
-          id="menu-container"
-          className="lg:hidden absolute top-full left-0 w-full h-screen bg-black bg-opacity-40 backdrop-blur-[2px] border-t-2 flex flex-col shadow-3xl"
+          className={`absolute w-full border-t-2d flex flex-col shadow-3xl ${
+            isMenuOpen ? "top-full" : "-top-[25vh]"
+          } transition-all duration-[500ms] ease-in-out`}
         >
-          {NAV_LINKS.map((link) => (
-            <Link
-              href={link.href}
-              key={link.key}
-              onClick={closeMenu}
-              className={`${link.href === "/contact" ? "" : "border-b-2"} 
-              bg-white py-4 text-xl text-grey-50 flexCenter cursor-pointer font-[500] tracking-tight hover:text-yellow-700 transition-all duration-100 ease-in-out active:text-yellow-600/70`}
-            >
-              {link.label}
-            </Link>
-          ))}
+          <ul>
+            {NAV_LINKS.map((link) => (
+              <li key={link.key}>
+                <Link
+                  href={link.href}
+                  onClick={closeMenu}
+                  className={`${link.href === "/contact" ? "" : "border-b-2"} 
+                  bg-white py-4 text-xl text-grey-50 flexCenter cursor-pointer font-[500] tracking-tight hover:text-yellow-700 transition-all duration-100 ease-in-out active:text-yellow-600/70`}
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
-      )}
+
+        <div
+          className={`z-[-1] h-screen w-full absolute bg-black/40 backdrop-blur-[2px] transition-opacity duration-[350ms] ${
+            isMenuOpen ? "opacity-100" : "opacity-0"
+          }`}
+        />
+      </div>
     </div>
   );
 };
