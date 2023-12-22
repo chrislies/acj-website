@@ -83,7 +83,9 @@ const Navbar = () => {
       <div className="lg:hidden relative z-20">
         <div
           className={`absolute w-full border-t-2d flex flex-col shadow-3xl ${
-            isMenuOpen ? "top-full" : "-top-[25vh]"
+            isMenuOpen
+              ? "top-full"
+              : "2xl:-top-[25vh] max-2xl:-top-[25vh] max-md:-top-[40vh]"
           } transition-all duration-[500ms] ease-in-out`}
         >
           <ul>
