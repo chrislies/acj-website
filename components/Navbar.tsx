@@ -30,6 +30,7 @@ const Navbar = () => {
   return (
     <div className="sticky top-0 z-40">
       <div
+        id="navHeader"
         className={`sticky top-0 z-40 bg-white ${
           isMenuOpen ? "shadow-md" : "shadow-3xl"
         } transition-all duration-[900ms]`}
@@ -80,13 +81,13 @@ const Navbar = () => {
         </nav>
       </div>
 
-      <div className="lg:hidden relative z-20">
+      <div id="navMenu" className="lg:hidden relative z-20">
         <div
-          className={`absolute w-full border-t-2d flex flex-col shadow-3xl ${
+          className={`absolute overflow-hidden w-full border-t-2d flex flex-col shadow-3xl ${
             isMenuOpen
               ? "top-full"
-              : "2xl:-top-[25vh] max-2xl:-top-[25vh] max-md:-top-[40vh]"
-          } transition-all duration-[500ms] ease-in-out`}
+              : "2xl:-top-[25vh] max-2xl:-top-[25vh] max-sm:-top-[70vh]"
+          } transition-all duration-[500ms] ease-linear`}
         >
           <ul>
             {NAV_LINKS.map((link) => (
@@ -105,8 +106,8 @@ const Navbar = () => {
         </div>
 
         <div
-          className={`z-[-1] w-full absolute bg-black/40 backdrop-blur-[2px] transition-opacity duration-[350ms] ${
-            isMenuOpen ? "h-screen opacity-100" : "opacity-0"
+          className={`z-[-1] h-screen w-full absolute bg-black/40 backdrop-blur-[2px] transition-opacity duration-[350ms] ease-in-out ${
+            isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
           }`}
         />
       </div>
