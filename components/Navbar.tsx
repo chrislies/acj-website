@@ -85,9 +85,10 @@ const Navbar = () => {
         <div
           className={`absolute overflow-hidden w-full border-t-2d flex flex-col shadow-3xl ${
             isMenuOpen
-              ? "top-full"
-              : "2xl:-top-[25vh] max-2xl:-top-[25vh] max-sm:-top-[70vh]"
-          } transition-all duration-[500ms] ease-linear`}
+              ? "top-0"
+              : // "max-lg:-top-[50vh] max-sm:-top-[70vh]"
+                "-top-[140vh]"
+          } transition-all duration-[350ms] ease-linear`}
         >
           <ul>
             {NAV_LINKS.map((link) => (
