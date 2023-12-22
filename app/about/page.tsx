@@ -60,6 +60,7 @@ const page = () => {
           {CERTIFICATES.map((cert) => (
             <div className="container relative border border-black/10 rounded-lg shadow-xl 2xl:w-[320px] max-2xl:w-[310px] max-xl:w-[250px] max-lg:w-[220px] max-md:w-[260px]">
               <Image
+                key={cert.id}
                 src={cert.src}
                 alt={cert.title}
                 width={1000}

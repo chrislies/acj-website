@@ -30,7 +30,10 @@ const services = () => {
       </div>
       <div className="bg-red-500d p-10 grid 2xl:grid-cols-3 max-2xl:grid-cols-3 max-md:grid-cols-2 max-sm:flex max-sm:flex-col grid-flow-row 2xl:gap-[2rem] max-2xl:gap-[25px] max-xl:gap-[22px] max-lg:gap-[20px] max-md:gap-[25px] max-sm:gap-[20px]">
         {SERVICES.map((service) => (
-          <div className="bg-[#FEFEFE] border-d2 border-yellow-700/70 rounded-lg shadow-xl 2xl:w-[320px] max-2xl:w-[310px] max-xl:w-[250px] max-lg:w-[220px] max-md:w-[260px] p-5 ">
+          <div
+            key={service.id}
+            className="bg-[#FEFEFE] border-d2 border-yellow-700/70 rounded-lg shadow-xl 2xl:w-[320px] max-2xl:w-[310px] max-xl:w-[250px] max-lg:w-[220px] max-md:w-[260px] p-5 "
+          >
             <h1 className="text-center text-xl font-bold">{service.title}</h1>
             <p className="bg-green-50d text-center 2xl:tracking-tight max-2xl:tracking-tight max-xl:tracking-tighter max-lg:tracking-[-.05em] 2xl:px-4 max-2xl:px-[16px] max-xl:px-[8px] max-lg:px-[1px] max-md:px-[10px] pt-4">
               {service.desc}
