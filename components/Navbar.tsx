@@ -105,8 +105,8 @@ const Navbar = () => {
         </div>
 
         <div
-          className={`z-[-1] h-screen w-full absolute bg-black/40 backdrop-blur-[2px] transition-opacity duration-[350ms] ${
-            isMenuOpen ? "opacity-100" : "opacity-0"
+          className={`z-[-1] w-full absolute bg-black/40 backdrop-blur-[2px] transition-opacity duration-[350ms] ${
+            isMenuOpen ? "h-screen opacity-100" : "opacity-0"
           }`}
         />
       </div>
