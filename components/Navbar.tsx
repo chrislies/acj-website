@@ -63,19 +63,19 @@ const Navbar = () => {
             className="lg:hidden cursor-pointer"
           >
             <span
-              className={`bar ${
-                isMenuOpen ? "rotate-45 translate-y-[8px]" : ""
-              } ease-in-out duration-300 transition-all`}
+              className={`bar 
+              ${isMenuOpen ? "rotate-45 translate-y-[8px]" : ""} 
+              ease-in-out duration-300 transition-all`}
             ></span>
             <span
-              className={`bar ${
-                isMenuOpen ? "opacity-0 bg-white" : ""
-              } ease-in-out duration-50 transition-all`}
+              className={`bar 
+              ${isMenuOpen ? "opacity-0 bg-white" : ""} 
+              ease-in-out duration-50 transition-all`}
             ></span>
             <span
-              className={`bar ${
-                isMenuOpen ? "rotate-[-45deg] translate-y-[-8px]" : ""
-              } ease-in-out duration-300 transition-all`}
+              className={`bar 
+              ${isMenuOpen ? "rotate-[-45deg] translate-y-[-8px]" : ""} 
+                ease-in-out duration-300 transition-all`}
             ></span>
           </div>
         </nav>
@@ -83,12 +83,9 @@ const Navbar = () => {
 
       <div id="navMenu" className="lg:hidden relative z-20">
         <div
-          className={`absolute overflow-hidden w-full border-t-2d flex flex-col shadow-3xl ${
-            isMenuOpen
-              ? "top-0"
-              : // "max-lg:-top-[50vh] max-sm:-top-[70vh]"
-                "-top-[140vh]"
-          } transition-all duration-[350ms] ease-linear`}
+          className={`fixed overflow-hidden w-full border-t-2d flex flex-col shadow-3xl 
+          ${isMenuOpen ? "top-[--header-height]" : "-top-[100%]"} 
+          transition-all duration-[400ms] ease-linear`}
         >
           <ul>
             {NAV_LINKS.map((link) => (

@@ -188,6 +188,15 @@ textarea {
   @apply text-lg;
 }
 
+/* Variables */
+:root {
+  --header-height: 85px;
+}
+
+#navHeader {
+  @apply h-[--header-height];
+}
+
 /* Hamburger memu bars */
 .bar {
   @apply block w-[30px] h-[3px] my-[5px] mx-[auto] bg-black;
