@@ -103,11 +103,11 @@ const Navbar = () => {
           </ul>
         </div>
 
-        <div
+        {/* <div
           className={`z-[-1] h-[90vh] w-full absolute bg-black/40 backdrop-blur-[2px] transition-opacity duration-[350ms] ease-in-out ${
             isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
           }`}
-        />
+        /> */}
       </div>
     </div>
   );
