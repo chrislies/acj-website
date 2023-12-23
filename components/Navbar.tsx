@@ -28,7 +28,7 @@ const Navbar = () => {
   }, [isMenuOpen]);
 
   return (
-    <div className="sticky top-0 z-40">
+    <div className="sticky top-0 z-50">
       <div
         id="navHeader"
         className={`sticky top-0 z-40 bg-white ${
@@ -81,9 +81,9 @@ const Navbar = () => {
         </nav>
       </div>
 
-      <div id="navMenu" className="lg:hidden">
+      <div id="navMenu" className="lg:hidden z-30">
         <div
-          className={`fixed w-full border-t-2d flex flex-col shadow-3xl 
+          className={`fixed z-30 w-full border-t-2d flex flex-col shadow-3xl 
           ${isMenuOpen ? "top-[--header-height]" : "-top-[100%]"} 
           transition-all duration-[400ms] ease-linear`}
         >
@@ -102,13 +102,13 @@ const Navbar = () => {
             ))}
           </ul>
         </div>
-
-        {/* <div
-          className={`z-[-1] h-[90vh] w-full absolute bg-black/40 backdrop-blur-[2px] transition-opacity duration-[350ms] ease-in-out ${
-            isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
-          }`}
-        /> */}
       </div>
+
+      <div
+        className={`lg:hidden absolute h-screen z-10 inset-0 bg-black/40 backdrop-blur-[2px] transition-opacity duration-[350ms] ease-in-out ${
+          isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
+      />
     </div>
   );
 };
