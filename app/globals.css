@@ -193,7 +193,7 @@ textarea {
 }
 
 #navHeader {
-  @apply h-[--header-height];
+  @apply h-[var(--header-height)];
 }
 
 /* Hamburger memu bars */
