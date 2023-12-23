@@ -5,7 +5,7 @@ import { Mail, Phone } from "./svgs";
 
 const Footer = () => {
   return (
-    <footer className="lg:pt-16 max-lg:pt-5 pb-5 bg-[rgb(131,172,70)] text-black">
+    <footer className="absolute w-full lg:pt-16 max-lg:pt-5 pb-5 bg-[rgb(131,172,70)] text-black">
       <div className="bg-red-500d max-container max-lg:padding-container flex w-full flex-col">
         <div className="grid lg:grid-cols-3 max-lg:grid-cols-1 max-lg:gap-5 lg:justify-items-center max-lg:justify-items-start items-start lg:text-base max-lg:text-xs font-semibold">
           <Link href="/">
