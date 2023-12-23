@@ -84,7 +84,8 @@ const Navbar = () => {
       <div id="navMenu" className="lg:hidden">
         <div
           className={`fixed w-full border-t-2d flex flex-col shadow-3xl 
-          ${isMenuOpen ? "top-[--header-height]" : "-top-[100%]"} 
+          // ${isMenuOpen ? "top-[--header-height]" : "-top-[100%]"} 
+          ${isMenuOpen ? "top-[--header-height]" : "hidden"} 
           transition-all duration-[400ms] ease-linear`}
         >
           <ul>
