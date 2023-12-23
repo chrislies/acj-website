@@ -22,13 +22,13 @@ const Hero = () => {
               Your Perfect Real Estate Partner.
             </span>
           </h1>
-          <br></br>
-          <p className="px-4 max-2xl:pt-3 max-xl:pt-0 max-w-prose 2xl:text-lg max-2xl:text-lg max-xl:text-base max-sm:text-base max-sm:p-0 max-sm:leading-5 tracking-wider max-sm:tracking-tight max-sm:font-semibold">
-            ACJ International Realty LLC offers expert consulting services in
-            the commercial real estate sector. We specialize in assisting
-            international companies in expanding their business within New York
-            and New Jersey.
-            {/* With over 18 years of experience in the real estate industry, ACJ
+          <div className="flex flex-col gap-6">
+            <p className="px-4 pt-6 max-2xl:pt-3 max-xl:pt-0 max-w-prose 2xl:text-lg max-2xl:text-lg max-xl:text-base max-sm:text-base max-sm:p-0 max-sm:leading-5 tracking-wider max-sm:tracking-tight max-sm:font-semibold">
+              ACJ International Realty LLC offers expert consulting services in
+              the commercial real estate sector. We specialize in assisting
+              international companies in expanding their business within New
+              York and New Jersey.
+              {/* With over 18 years of experience in the real estate industry, ACJ
             International Realty LLC offers expert consulting services in the
             commercial real estate sector. We specialize in assisting
             international companies in expanding their business within New York
@@ -36,18 +36,18 @@ const Hero = () => {
             clients' unique needs has earned us their trust, establishing ACJ
             International Realty as a top brokerage firm for both commercial and
             residential properties. */}
-          </p>
-          <br></br>
-          <span className="flex justify-end max-sm:justify-center">
-            <Link href="/services">
-              <button className="learn-btn flex flex-row items-center gap-2 rounded-lg bg-yellow-600 hover:bg-[#d79c09] border border-yellow-900 px-5 py-2 text-black text-base tracking-wide font-semibold">
-                Our Services
-                <span className="arrow-span">
-                  <RightArrow className="h-[20px]"></RightArrow>
-                </span>
-              </button>
-            </Link>
-          </span>
+            </p>
+            <span className="flex justify-end max-sm:justify-center">
+              <Link href="/services">
+                <button className="learn-btn flex flex-row items-center gap-2 rounded-lg bg-yellow-600 hover:bg-[#d79c09] border border-yellow-900 px-5 py-2 text-black text-base tracking-wide font-semibold">
+                  Our Services
+                  <span className="arrow-span">
+                    <RightArrow className="h-[20px]"></RightArrow>
+                  </span>
+                </button>
+              </Link>
+            </span>
+          </div>
         </div>
       </section>
     </div>
