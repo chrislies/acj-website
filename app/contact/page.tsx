@@ -118,7 +118,7 @@ const page = () => {
   };
 
   return (
-    <section>
+    <section className="min-h-screend">
       <div
         className="flex justify-center bg-cover bg-no-repeat bg-center h-[30vh]"
         style={{ backgroundImage: 'url("/compressed_images/worldmap.webp")' }}

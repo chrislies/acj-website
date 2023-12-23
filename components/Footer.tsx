@@ -46,7 +46,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t-2 mt-20 mb-5" />
+        <div className="border-t mt-20 mb-5" />
         <p className="regular-14 w-full max-lg:text-xs text-center tracking-tighter">
           © 2023 ACJ International Realty LLC. All rights reserved.
         </p>
