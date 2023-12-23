@@ -35,7 +35,7 @@ const Navbar = () => {
           isMenuOpen ? "shadow-md" : "shadow-3xl"
         } transition-all duration-[900ms]`}
       >
-        <nav className="flexBetween max-container padding-container relative py-1 max-w-full">
+        <nav className="flexBetween max-container padding-container py-1 max-w-full">
           <Link href="/">
             <Image
               src="/compressed_images/acj-logo.webp"
@@ -83,7 +83,7 @@ const Navbar = () => {
 
       <div id="navMenu" className="lg:hidden">
         <div
-          className={`absolute w-full border-t-2d flex flex-col shadow-3xl 
+          className={`fixed w-full border-t-2d flex flex-col shadow-3xl 
           ${isMenuOpen ? "top-[--header-height]" : "-top-[100%]"} 
           transition-all duration-[400ms] ease-linear`}
         >
