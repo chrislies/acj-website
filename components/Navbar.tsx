@@ -35,7 +35,7 @@ const Navbar = () => {
           isMenuOpen ? "shadow-md" : "shadow-3xl"
         } transition-all duration-[900ms]`}
       >
-        <nav className="flexBetween max-container padding-container relative z-30 py-1 max-w-full">
+        <nav className="flexBetween max-container padding-container relative py-1 max-w-full">
           <Link href="/">
             <Image
               src="/compressed_images/acj-logo.webp"
@@ -44,7 +44,7 @@ const Navbar = () => {
               height={1}
             />
           </Link>
-          <ul className="hidden h-full gap-16 lg:flex">
+          <ul className="hidden gap-16 lg:flex">
             {NAV_LINKS.map((link) => (
               <li key={link.key}>
                 <Link
@@ -81,9 +81,9 @@ const Navbar = () => {
         </nav>
       </div>
 
-      <div id="navMenu" className="lg:hidden relative z-20">
+      <div id="navMenu" className="lg:hidden">
         <div
-          className={`fixed overflow-hidden w-full border-t-2d flex flex-col shadow-3xl 
+          className={`fixed w-full border-t-2d flex flex-col shadow-3xl 
           ${isMenuOpen ? "top-[--header-height]" : "-top-[100%]"} 
           transition-all duration-[400ms] ease-linear`}
         >
