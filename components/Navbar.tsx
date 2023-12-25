@@ -35,7 +35,7 @@ const Navbar = () => {
           isMenuOpen ? "shadow-md" : "shadow-3xl"
         } transition-all duration-[900ms]`}
       >
-        <nav className="flexBetween max-container padding-container py-1 max-w-full">
+        <nav className="flexBetween h-[--header-height] max-container padding-container py-1 max-w-full">
           <Link href="/">
             <Image
               src="/compressed_images/acj-logo.webp"
