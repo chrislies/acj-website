@@ -50,7 +50,7 @@ const Navbar = () => {
               <li key={link.key}>
                 <Navlink
                   href={link.href}
-                  className={`text-base font-semibold text-grey-50 flexCenter cursor-pointer border-y-2 border-transparent hover:border-b-yellow-500/70 transition-all duration-300 ease-in-out`}
+                  className={`text-base font-semibold text-grey-50 flexCenter cursor-pointer border-y-2 border-transparent hover:border-b-yellow-600/60 transition-all duration-300 ease-in-out`}
                   activeClasses="border-b-yellow-600/70"
                   label={link.label}
                 />
