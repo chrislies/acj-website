@@ -135,7 +135,7 @@ const page = () => {
           <Mail className="h-[22px] max-lg:h-4"></Mail>
           <Link
             className="hover:underline"
-            href="mailto:info@acjinternationalfrealty.com"
+            href="mailto:info@acjinternationalrealty.com"
           >
             info@acjinternationalrealty.com
           </Link>
