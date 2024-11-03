@@ -5,7 +5,8 @@ import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "ACJ International Realty LLC",
-  description: "ACJ International Realty LLC Website",
+  description:
+    "ACJ International Realty LLC offers expert consulting services in the commercial real estate sector. We specialize in assisting international companies in expanding their business within New York and New Jersey.",
 };
 
 export default function RootLayout({
