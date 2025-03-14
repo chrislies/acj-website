@@ -1,7 +1,9 @@
 "use client"; // for useState feature
 import { Mail, Phone, Spinner } from "@/components/svgs";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
+import HCaptcha from "@hcaptcha/react-hcaptcha";
 
 const page = () => {
   const [name, setName] = useState("");
@@ -16,23 +18,46 @@ const page = () => {
   });
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
+  const captchaRef = useRef<HCaptcha>(null);
+
+  const sanitizeInput = (input: string) => {
+    return input
+      .replace(/</g, "&lt;") // Replace `<` with `&lt;`
+      .replace(/>/g, "&gt;") // Replace `>` with `&gt;`
+      .replace(/&/g, "&amp;") // Replace `&` with `&amp;`
+      .replace(/"/g, "&quot;") // Replace `"` with `&quot;`
+      .replace(/'/g, "&#039;"); // Replace `'` with `&#039;`
+  };
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+
+    // Validate hCaptcha token
+    if (!captchaToken) {
+      toast.error("Please complete the CAPTCHA challenge.", {
+        id: "captcha-error-toast",
+        duration: 5000,
+      });
+      return;
+    }
+
     setLoading(true); // Set loading to true during submission
 
     try {
+      const sanitizedData = {
+        name: sanitizeInput(name.trim()),
+        email: sanitizeInput(email.trim()),
+        message: sanitizeInput(message),
+        captchaToken,
+      };
+
       const res = await fetch("api/contact", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
         },
-        body: JSON.stringify({
-          name,
-          email,
-          phone,
-          message,
-        }),
+        body: JSON.stringify(sanitizedData),
       });
 
       const { msg, success } = await res.json();
@@ -51,6 +76,8 @@ const page = () => {
           messageError: "",
         });
         setSuccess(true);
+        toast.success("Email sent successfully!", { id: "email-success-toast", duration: 10000 });
+        captchaRef.current?.resetCaptcha();
       } else {
         // console.log("Form submission failed", msg); // Log failed form submission and error messages
         // Map error messages to input fields
@@ -112,9 +139,18 @@ const page = () => {
       }
     } catch (error) {
       console.log("Error submitting form:", error);
+      toast.error("An error occurred. Please try again later.", {
+        id: "email-error-toast",
+        duration: 10000,
+      });
     } finally {
       setLoading(false); // Set loading to false after submission
     }
+  };
+
+  // Handle hCaptcha verification
+  const handleCaptchaVerify = (token: string) => {
+    setCaptchaToken(token);
   };
 
   return (
@@ -142,7 +178,10 @@ const page = () => {
         </div>
         <div className="flex gap-2 items-center">
           <Phone className="h-[22px] max-lg:h-4"></Phone>
-          <Link className="hover:underline" href="tel:9297100869">
+          <Link
+            className="hover:underline"
+            href="tel:9297100869"
+          >
             929-710-0869
           </Link>
         </div>
@@ -166,11 +205,12 @@ const page = () => {
             type="text"
             id="name"
             placeholder=""
-            className={`${
-              errors.nameError ? "border-red-500" : "border-slate-300"
-            }`}
+            className={`${errors.nameError ? "border-red-500" : "border-slate-300"}`}
           />
-          <span id="nameError" className="text-red-600">
+          <span
+            id="nameError"
+            className="text-red-600"
+          >
             {errors.nameError}
           </span>
         </div>
@@ -189,11 +229,12 @@ const page = () => {
             type="text"
             id="email"
             placeholder=""
-            className={`${
-              errors.emailError ? "border-red-500" : "border-slate-300"
-            }`}
+            className={`${errors.emailError ? "border-red-500" : "border-slate-300"}`}
           />
-          <span id="emailError" className="text-red-600">
+          <span
+            id="emailError"
+            className="text-red-600"
+          >
             {errors.emailError}
           </span>
         </div>
@@ -207,7 +248,10 @@ const page = () => {
             id="phone"
             placeholder=""
           />
-          <span id="phoneError" className="text-red-600">
+          <span
+            id="phoneError"
+            className="text-red-600"
+          >
             {errors.phoneError}
           </span>
         </div>
@@ -226,14 +270,22 @@ const page = () => {
             style={{ minHeight: "128px", resize: "vertical" }}
             id="message"
             placeholder=""
-            className={`${
-              errors.messageError ? "border-red-500" : "border-slate-300"
-            }`}
+            className={`${errors.messageError ? "border-red-500" : "border-slate-300"}`}
           ></textarea>
-          <span id="messageError" className="text-red-600">
+          <span
+            id="messageError"
+            className="text-red-600"
+          >
             {errors.messageError}
           </span>
         </div>
+
+        {/* hCaptcha compoment */}
+        <HCaptcha
+          sitekey={process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY || ""}
+          onVerify={handleCaptchaVerify}
+          ref={captchaRef}
+        />
 
         <button
           className="bg-green-600 hover:bg-green-500 rounded p-3 w-[150px] text-white font-bold"
@@ -249,17 +301,8 @@ const page = () => {
             "Send"
           )}
         </button>
-        <div className="2xl:h-5 max-2xl:h-5 max-sm:h-[30px]">
-          {success && (
-            <div
-              className={`bg-slate-100 text-green-800 text-lg px-5 py-2`}
-              key="success"
-            >
-              Message sent successfully.
-            </div>
-          )}
-        </div>
       </form>
+      <Toaster />
     </section>
   );
 };
