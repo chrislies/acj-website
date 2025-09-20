@@ -82,7 +82,58 @@ const page = () => {
         // console.log("Form submission failed", msg); // Log failed form submission and error messages
         // Map error messages to input fields
         const errorMap: Record<string, string | string[]> = {};
-        msg.forEach((err: string | string[]) => {
+        if (Array.isArray(msg)) {
+          msg.forEach((err: string | string[]) => {
+            if (typeof err !== "string") return;
+            if (err.includes("Name")) {
+              errorMap.nameError = err;
+              const nameElement = document.querySelector(".name");
+              if (nameElement) {
+                nameElement.scrollIntoView({
+                  behavior: "smooth",
+                  block: "center",
+                  inline: "nearest",
+                });
+              }
+            } else if (err.includes("valid name")) {
+              errorMap.nameError = err;
+              const nameElement = document.querySelector(".name");
+              if (nameElement) {
+                nameElement.scrollIntoView({
+                  behavior: "smooth",
+                  block: "center",
+                  inline: "nearest",
+                });
+              }
+            } else if (err.includes("Email")) {
+              errorMap.emailError = err;
+              const emailElement = document.querySelector(".email");
+              if (emailElement) {
+                emailElement.scrollIntoView({
+                  behavior: "smooth",
+                  block: "center",
+                  inline: "nearest",
+                });
+              }
+            } else if (err.includes("Phone")) {
+              errorMap.phoneError = err;
+            } else if (err.includes("Message")) {
+              errorMap.messageError = err;
+            } else {
+              errorMap.emailError = err;
+              const emailElement = document.querySelector(".email");
+              if (emailElement) {
+                emailElement.scrollIntoView({
+                  behavior: "smooth",
+                  block: "center",
+                  inline: "nearest",
+                });
+              }
+            }
+          });
+        } else if (typeof msg === "string") {
+          // Handle single string error
+          let err = msg;
           if (err.includes("Name")) {
             errorMap.nameError = err;
             const nameElement = document.querySelector(".name");
@@ -128,7 +179,7 @@ const page = () => {
               });
             }
           }
-        });
+        }
         // console.log("New errors:", { ...errors, ...errorMap }); // Log the new errors
 
         setErrors((prevErrors) => ({
