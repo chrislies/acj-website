@@ -55,7 +55,12 @@ export async function POST(req) {
       }
       return NextResponse.json({ msg: errorList });
     } else {
-      return NextResponse.json({ msg: "Unable to send message." });
+      console.error("Contact API error:", error);
+      if (error && typeof error === "object") {
+        if (error.message) console.error("Error message:", error.message);
+        if (error.stack) console.error("Error stack:", error.stack);
+      }
+      return NextResponse.json({ msg: error?.message ? error.message : "Unable to send message." });
     }
   }
 }
