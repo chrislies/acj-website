@@ -231,9 +231,9 @@ const page = () => {
           <Phone className="h-[22px] max-lg:h-4"></Phone>
           <Link
             className="hover:underline"
-            href="tel:9297100869"
+            href="tel:917-295-2102"
           >
-            929-710-0869
+            (917) 295-2102
           </Link>
         </div>
       </div>
