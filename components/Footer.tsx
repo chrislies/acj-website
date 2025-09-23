@@ -31,8 +31,8 @@ const Footer = () => {
           <div className="flex flex-col items-start gap-5">
             <div className="flex flex-row gap-2 items-center">
               <Phone className="h-[20px] max-lg:h-3"></Phone>
-              <Link className="hover:underline" href="tel:9297100869">
-                929-710-0869
+              <Link className="hover:underline" href="tel:917-295-2102">
+                (917) 295-2102
               </Link>
             </div>
             <div className="flex flex-row gap-2 items-center">
