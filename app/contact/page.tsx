@@ -1,5 +1,6 @@
 "use client"; // for useState feature
 import { Mail, Phone, Spinner } from "@/components/svgs";
+import { CONTACT_INFO } from "@/constants";
 import Link from "next/link";
 import React, { useRef, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
@@ -206,42 +207,28 @@ const page = () => {
 
   return (
     <section className="min-h-screend">
-      <div
-        className="flex justify-center bg-cover bg-no-repeat bg-center h-[30vh]"
-        style={{ backgroundImage: 'url("/compressed_images/worldmap.webp")' }}
-      >
+      <div className="flex justify-center bg-cover bg-no-repeat bg-center h-[30vh]" style={{ backgroundImage: 'url("/compressed_images/worldmap.webp")' }}>
         <div className="backdrop-blur-[3px] bg-white/20 w-full h-full flex flex-col justify-center items-center">
-          <h1 className="font-bold lg:text-6xl max-lg:text-5xl max-sm:text-4xl tracking-tight leading-[70px]">
-            Contact Us
-          </h1>
+          <h1 className="font-bold lg:text-6xl max-lg:text-5xl max-sm:text-4xl tracking-tight leading-[70px]">Contact Us</h1>
         </div>
       </div>
 
       <div className="bg-red-400d flex gap-[120px] justify-center items-center pt-10 2xl:text-xl max-md:text-sm max-md:flex-col max-md:gap-2">
         <div className="flex gap-2 items-center">
           <Mail className="h-[22px] max-lg:h-4"></Mail>
-          <Link
-            className="hover:underline"
-            href="mailto:info@acjinternationalrealty.com"
-          >
-            info@acjinternationalrealty.com
+          <Link className="hover:underline" href={`mailto:${CONTACT_INFO.email}`}>
+            {CONTACT_INFO.email}
           </Link>
         </div>
         <div className="flex gap-2 items-center">
           <Phone className="h-[22px] max-lg:h-4"></Phone>
-          <Link
-            className="hover:underline"
-            href="tel:917-295-2102"
-          >
-            (917) 295-2102
+          <Link className="hover:underline" href={`${CONTACT_INFO.phoneHref}`}>
+            {CONTACT_INFO.phoneDisplay}
           </Link>
         </div>
       </div>
 
-      <form
-        onSubmit={handleSubmit}
-        className="bg-blue-500d pt-8 pb-10 flex flex-col items-center gap-5 2xl:px-[200px] max-2xl:px-[200px] max-xl:px-[100px] max-lg:px-8"
-      >
+      <form onSubmit={handleSubmit} className="bg-blue-500d pt-8 pb-10 flex flex-col items-center gap-5 2xl:px-[200px] max-2xl:px-[200px] max-xl:px-[100px] max-lg:px-8">
         <div className="name">
           <label htmlFor="name">
             Name<span className="text-red-500">*</span>
@@ -258,10 +245,7 @@ const page = () => {
             placeholder=""
             className={`${errors.nameError ? "border-red-500" : "border-slate-300"}`}
           />
-          <span
-            id="nameError"
-            className="text-red-600"
-          >
+          <span id="nameError" className="text-red-600">
             {errors.nameError}
           </span>
         </div>
@@ -282,27 +266,15 @@ const page = () => {
             placeholder=""
             className={`${errors.emailError ? "border-red-500" : "border-slate-300"}`}
           />
-          <span
-            id="emailError"
-            className="text-red-600"
-          >
+          <span id="emailError" className="text-red-600">
             {errors.emailError}
           </span>
         </div>
 
         <div className="phone">
           <label htmlFor="phone">Phone Number</label>
-          <input
-            onChange={(event) => setPhone(event.target.value)}
-            value={phone}
-            type="text"
-            id="phone"
-            placeholder=""
-          />
-          <span
-            id="phoneError"
-            className="text-red-600"
-          >
+          <input onChange={(event) => setPhone(event.target.value)} value={phone} type="text" id="phone" placeholder="" />
+          <span id="phoneError" className="text-red-600">
             {errors.phoneError}
           </span>
         </div>
@@ -323,26 +295,15 @@ const page = () => {
             placeholder=""
             className={`${errors.messageError ? "border-red-500" : "border-slate-300"}`}
           ></textarea>
-          <span
-            id="messageError"
-            className="text-red-600"
-          >
+          <span id="messageError" className="text-red-600">
             {errors.messageError}
           </span>
         </div>
 
         {/* hCaptcha compoment */}
-        <HCaptcha
-          sitekey={process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY || ""}
-          onVerify={handleCaptchaVerify}
-          ref={captchaRef}
-        />
+        <HCaptcha sitekey={process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY || ""} onVerify={handleCaptchaVerify} ref={captchaRef} />
 
-        <button
-          className="bg-green-600 hover:bg-green-500 rounded p-3 w-[150px] text-white font-bold"
-          type="submit"
-          disabled={loading}
-        >
+        <button className="bg-green-600 hover:bg-green-500 rounded p-3 w-[150px] text-white font-bold" type="submit" disabled={loading}>
           {loading ? (
             <div className="flex flex-row">
               <Spinner className="animate-spin h-6 mr-3"></Spinner>

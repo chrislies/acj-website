@@ -1,4 +1,4 @@
-import { NAV_LINKS } from "@/constants";
+import { NAV_LINKS, CONTACT_INFO } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 import { Mail, Phone } from "./svgs";
@@ -10,20 +10,11 @@ const Footer = () => {
       <div className="bg-red-500d max-container max-lg:padding-container flex w-full flex-col">
         <div className="grid lg:grid-cols-3 max-lg:grid-cols-1 max-lg:gap-5 lg:justify-items-center max-lg:justify-items-start items-start lg:text-base max-lg:text-xs font-semibold">
           <Link href="/">
-            <Image
-              src="/compressed_images/acj-logo.webp"
-              alt="logo"
-              width={150}
-              height={1}
-            ></Image>
+            <Image src="/compressed_images/acj-logo.webp" alt="logo" width={150} height={1}></Image>
           </Link>
           <div className="flex lg:flex-row lg:gap-10 max-lg:flex-col max-lg:gap-4">
             {NAV_LINKS.map((link) => (
-              <Link
-                href={link.href}
-                key={link.key}
-                className="hover:opacity-60 transition-all duration-200 ease-in-out"
-              >
+              <Link href={link.href} key={link.key} className="hover:opacity-60 transition-all duration-200 ease-in-out">
                 {link.label}
               </Link>
             ))}
@@ -31,26 +22,21 @@ const Footer = () => {
           <div className="flex flex-col items-start gap-5">
             <div className="flex flex-row gap-2 items-center">
               <Phone className="h-[20px] max-lg:h-3"></Phone>
-              <Link className="hover:underline" href="tel:917-295-2102">
-                (917) 295-2102
+              <Link className="hover:underline" href={`${CONTACT_INFO.phoneHref}`}>
+                {CONTACT_INFO.phoneDisplay}
               </Link>
             </div>
             <div className="flex flex-row gap-2 items-center">
               <Mail className="h-[20px] max-lg:h-3"></Mail>
-              <Link
-                className="hover:underline"
-                href="mailto:info@acjinternationalrealty.com"
-              >
-                info@acjinternationalrealty.com
+              <Link className="hover:underline" href={`mailto:${CONTACT_INFO.email}`}>
+                {CONTACT_INFO.email}
               </Link>
             </div>
           </div>
         </div>
 
         <div className="border-t mt-20 mb-5" />
-        <p className="regular-14 max-lg:text-xs text-center tracking-tighter">
-          © {currYear} ACJ International Realty LLC. All rights reserved.
-        </p>
+        <p className="regular-14 max-lg:text-xs text-center tracking-tighter">© {currYear} ACJ International Realty LLC. All rights reserved.</p>
       </div>
     </footer>
   );
