@@ -1,3 +1,9 @@
+export const CONTACT_INFO = {
+  email: "info@acjinternationalrealty.com",
+  phoneDisplay: "(917) 295-2102",
+  phoneHref: "tel:917-295-2102",
+};
+
 export const NAV_LINKS = [
   { href: "/", key: "home", label: "Home" },
   { href: "/about", key: "about", label: "About" },
@@ -14,8 +20,7 @@ export const CERTIFICATES = [
   },
   {
     id: 2,
-    title:
-      "NY/NJ Port Authority - Certified Minority Women Business Enterprise",
+    title: "NY/NJ Port Authority - Certified Minority Women Business Enterprise",
     src: "/compressed_images/portauthority-mwbe.webp",
     href: "",
   },
@@ -33,15 +38,13 @@ export const CERTIFICATES = [
   },
   {
     id: 5,
-    title:
-      "Small Business Administration - Women Owned Small Business Certified",
+    title: "Small Business Administration - Women Owned Small Business Certified",
     src: "/compressed_images/sba-wosb.webp",
     href: "",
   },
   {
     id: 6,
-    title:
-      "Small Business Administration - Economically Disadvantaged Women Owned Small Business Certified",
+    title: "Small Business Administration - Economically Disadvantaged Women Owned Small Business Certified",
     src: "/compressed_images/sba-edwosb.webp",
     href: "",
   },
@@ -53,8 +56,7 @@ export const CERTIFICATES = [
   },
   {
     id: 8,
-    title:
-      "NYC Department of Housing Preservation & Development - Marketing Agent Certified",
+    title: "NYC Department of Housing Preservation & Development - Marketing Agent Certified",
     src: "/compressed_images/hpd-mac.webp",
     href: "https://www.nyc.gov/site/hpd/services-and-information/marketing-agent-training.page",
   },
