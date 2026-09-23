@@ -1,0 +1,30 @@
+name: Annual Footer Year Refresh
+
+on:
+  schedule:
+    # 06:00 UTC on January 1st every year
+    - cron: "0 6 1 1 *"
+  workflow_dispatch: {}
+
+jobs:
+  trigger-redeploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Vercel redeploy via Deploy Hook
+        run: |
+          if [ -z "${{ secrets.VERCEL_DEPLOY_HOOK_URL }}" ]; then
+            echo "VERCEL_DEPLOY_HOOK_URL secret is not set."
+            exit 1
+          fi
+
+          response=$(curl -s -o response.json -w "%{http_code}" -X POST \
+            "${{ secrets.VERCEL_DEPLOY_HOOK_URL }}")
+
+          echo "HTTP status: $response"
+          echo "Response body:"
+          cat response.json
+
+          if [ "$response" -ge 400 ]; then
+            echo "Failed to trigger Vercel redeploy."
+            exit 1
+          fi
